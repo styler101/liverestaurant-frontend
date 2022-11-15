@@ -1,7 +1,13 @@
 import React from 'react'
+import { GlobalStyles } from '../../assets/styles/global'
+import { Header } from '../Header'
 
 export function App () {
   return (
-    <h1>  Hello Word! </h1>
+    <React.Fragment>
+          <Header/>
+          <GlobalStyles/>
+    </React.Fragment>
+
   )
 }
