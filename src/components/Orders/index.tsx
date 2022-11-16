@@ -12,16 +12,19 @@ export function Orders () {
        <OrdersBoard
          icon={timerIcon}
          title="Fila de espera"
+         // @ts-expect-error
          orders={orders}
        />
       <OrdersBoard
         icon={cookIcon}
         title="Em Produção"
+        // @ts-expect-error
         orders={orders}
       />
       <OrdersBoard
         icon={checkedIcon}
         title="Pronto!"
+        // @ts-expect-error
         orders={orders}
       />
     </S.Container>

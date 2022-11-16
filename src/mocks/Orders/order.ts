@@ -2,12 +2,12 @@ const orders = [
   {
     _id: '6372e48cbcd195b0d3d0f7f3',
     table: '123',
-    status: 'WAITING',
+    status: 'DONE',
     products: [
       {
         product: {
           name: 'Pizza quatro queijos',
-          imagePath: '1668472896991-quatro-queijos.png',
+          imagePath: '1668624213113-marguerita.png',
           price: 40
         },
         quantity: 3,
@@ -16,7 +16,7 @@ const orders = [
       {
         product: {
           name: 'Coca cola',
-          imagePath: '1668473462705-coca-cola.png',
+          imagePath: '1668624213113-marguerita.png',
           price: 7
         },
         quantity: 2,

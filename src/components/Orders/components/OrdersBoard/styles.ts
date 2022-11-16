@@ -7,7 +7,6 @@ border: 1px solid rgba(204, 204, 205, 0.4);
 border-radius:4px;
 
 header{
-  padding: 8px;
   font-size: 14px;
   display:flex;
   align-items:center;
