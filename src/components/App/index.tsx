@@ -1,14 +1,12 @@
 import React from 'react'
 import { GlobalStyles } from '../../assets/styles/global'
-import { Header } from '../Header'
-import { Orders } from '../Orders'
+import { SignIn } from '../../pages/SignIn'
 
 export function App () {
   return (
     <React.Fragment>
-        <Header/>
-        <Orders/>
-        <GlobalStyles/>
+      <SignIn/>
+      <GlobalStyles/>
     </React.Fragment>
 
   )

@@ -23,11 +23,13 @@ export function OrderModal (props: OrderModalProps) {
   function handleExit (event: KeyboardEvent) {
     if (event.key === 'Escape') { closeModal(null) }
   }
+
   useEffect(() => {
     document.addEventListener('keydown', handleExit)
 
     return () => document.removeEventListener('keydown', handleExit)
   }, [handleExit])
+
   return (
     <S.Overlay>
       <S.Container>
