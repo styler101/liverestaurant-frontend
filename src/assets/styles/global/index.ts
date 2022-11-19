@@ -44,9 +44,10 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-family: GeneralSans, sans-serif;
   }
-  body {
+  html, body, #root {
     background: #fafafa;
     color: #333;
+    min-height: 100%;
   }
   button {
     cursor: pointer;
