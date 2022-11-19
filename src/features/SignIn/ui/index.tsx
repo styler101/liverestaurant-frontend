@@ -1,5 +1,7 @@
 import React from 'react'
-
+import { Input, Button } from '../../../components/Form'
+import { FiMail, FiLock } from 'react-icons/fi'
+import { FcGoogle } from 'react-icons/fc'
 import logo from '../../../assets/images/svg/ilustra.svg'
 import wrapper from '../../../assets/images/img/wrapper.jpg'
 import * as S from './styles'
@@ -14,16 +16,41 @@ export const Ui = () => {
           <h2> Gerencie os pedidos do seu restaurante de uma forma simples e intuitiva.</h2>
         </div>
       </S.LeftContent>
+
       <S.RightContent>
-      <div className="form">
+
+      <S.Form>
         <img src={logo} alt="logo"/>
         <strong> Faça seu Logon </strong>
-        <input type="text" placeholder="Informe o seu email"/>
-        <input type="text" placeholder="Informe  sua senha"/>
-        <button> Entrar com o Google </button>
-        <button> Entrar </button>
-      </div>
+        <Input
+           icon={FiMail}
+           placeholder="Informe o seu email"
+           width={256}
+           height={42}
+           />
+        <Input
+          icon={FiLock}
+          placeholder="Informe a sua senha"
+          width={256}
+          height={42}
+          />
+        <Button
+          color='#FF5A5F'
+          disabled={false}
+          >
+          <S.ButtonLabel>Entrar</S.ButtonLabel>
+
+          </Button>
+        <Button color='#4285F4' disabled={false}>
+          <S.EntrerWithGoogle>
+            <FcGoogle size={20}/>
+              <span>Entrar com o Google</span>
+          </S.EntrerWithGoogle>
+         </Button>
+      </S.Form>
+
       </S.RightContent>
+
     </S.Container>
   )
 }

@@ -46,12 +46,13 @@ export const LeftContent = styled.div`
 
    h2{
     margin:0;
-    color:#f2f2f2;
-    font-size: 19px;
+    color:#ccc;
+    font-size: 16px;
     width:100%;
     max-width:500px;
     text-align: center;
     box-shadow: 1px solid #000;
+    font-weight:normal;
    }
  }
 `
@@ -62,6 +63,7 @@ export const RightContent = styled.div`
  flex-direction:column;
  align-items:center;
  justify-content: center;
+ background-color:#fff;
 
  .form{
   width:100%;
@@ -74,10 +76,69 @@ export const RightContent = styled.div`
 
 
   img{
-    width:100px;
-    height: 100px;
-    object-fit: cover;
+    width:80px;
+    height: 80px;
+
   }
+
+ }
+
+`
+
+export const Form = styled.form`
+ width:100%;
+ max-width:380px;
+ padding: 0 32px;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content: center;
+
+ img{
+  width:300px;
+  height:100px;
+ }
+
+ strong{
+  margin: 16px;
+  font-size:24px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  color:#999999;
+  font-weight: normal;
+ }
+
+ input{
+  height:42px;
+ }
+`
+
+export const EntrerWithGoogle = styled.div`
+ display:flex;
+ align-items:center;
+ justify-content: center;
+ font-weight:600;
+ color:#f2f2f2;
+
+ span{
+  font-weight: 600;
+  display:block;
+  margin-left:8px;
+
+ }
+`
+
+export const ButtonLabel = styled.span`
+
+ display:flex;
+ align-items:center;
+ justify-content: center;
+ font-weight:600;
+ color:#f2f2f2;
+
+ span{
+  font-weight: 600;
+  display:block;
+  margin-left:8px;
 
  }
 

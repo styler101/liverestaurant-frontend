@@ -44,6 +44,10 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-family: GeneralSans, sans-serif;
   }
+
+  body, input, button{
+    font-family: 'GeneralSans';
+  }
   html, body, #root {
     background: #fafafa;
     color: #333;
