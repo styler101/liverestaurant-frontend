@@ -1,13 +1,32 @@
 import React from 'react'
+import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as Fi from 'react-icons/fi'
+import * as Fc from 'react-icons/fc'
+
 import { Input, Button } from '../../../components/Form'
-import { FiMail, FiLock } from 'react-icons/fi'
-import { FcGoogle } from 'react-icons/fc'
+
+import { FormValues } from './interfaces'
+
+import schema from './schema'
 
 import logo from '../../../assets/images/svg/ilustra.svg'
 import wrapper from '../../../assets/images/img/wrapper.jpg'
 import * as S from './styles'
 
 export const Ui = () => {
+  const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormValues>({
+    resolver: yupResolver(schema()),
+    mode: 'onChange',
+    defaultValues: {
+      email: '',
+      password: ''
+    }
+  })
+
+  console.log()
+  console.log()
+  const onSubmit = (data: FormValues) => console.log(data)
   return (
     <S.Container>
       <S.LeftContent>
@@ -20,32 +39,41 @@ export const Ui = () => {
 
       <S.RightContent>
 
-      <S.Form>
+      <S.Form onSubmit={handleSubmit(onSubmit)}>
         <img src={logo} alt="logo"/>
         <strong> Faça seu login </strong>
         <Input
-           icon={FiMail}
+           icon={Fi.FiMail}
            placeholder="Email"
            width={256}
            height={42}
+           name="email"
+           register={register}
+           error={ Boolean(errors.email)}
            />
+          <span className='warning-text'> {errors.email && errors.email.message}</span>
         <Input
-          icon={FiLock}
+          icon={Fi.FiLock}
+          type="password"
           placeholder="Senha"
           width={256}
           height={42}
+          name="password"
+          register={register}
+          error={ Boolean(errors.password)}
           />
+          <span className='warning-text'> {errors.password && errors.password.message}</span>
         <Button
           color='#FF5A5F'
-          disabled={false}
+          disabled={!isValid}
           >
           <S.ButtonLabel>Entrar</S.ButtonLabel>
 
           </Button>
-        <Button color='#4285F4' disabled={false}>
+        <Button color='#4285F4' >
           <S.EntrerWithGoogle>
-            <FcGoogle size={20}/>
-              <span>Entrar com o Google</span>
+            <Fc.FcGoogle size={20}/>
+              <p>Entrar com o Google</p>
           </S.EntrerWithGoogle>
          </Button>
       </S.Form>

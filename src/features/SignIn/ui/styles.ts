@@ -104,6 +104,14 @@ export const Form = styled.form`
   height:100px;
  }
 
+ .warning-text{
+  display:block;
+  width:100%;
+  margin:8px 0;
+  color: #FF5A5F;
+  font-weight:400;
+  text-align: center;
+ }
  strong{
   margin: 16px;
   font-size:24px;

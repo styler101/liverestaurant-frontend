@@ -1,6 +1,9 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const Container = styled.div`
+interface ContainerProps {
+  error: boolean
+}
+export const Container = styled.div<ContainerProps>`
  display:flex;
  align-items:center;
  border: 1px solid #c8c8c8c8;
@@ -8,6 +11,9 @@ export const Container = styled.div`
  padding: 0 8px;
  width:100%;
 
+ & + div{
+  margin-top:16px;
+ }
 &:focus-within{
   border-color:#4285F4;
   svg{
@@ -37,10 +43,22 @@ export const Container = styled.div`
 
   }
 
-
 }
-& + div{
-    margin-top:16px;
+
+${(props) => props.error && css`
+&:focus-within{
+  border-color:#FF5A5F;
+  svg{
+    color: #FF5A5F;
+  }
+}
+  border: 2px solid #FF5A5F;
+  svg{
+    color:#FF5A5F;
   }
 
+
+
+
+`}
 `

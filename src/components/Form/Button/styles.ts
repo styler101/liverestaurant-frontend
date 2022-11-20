@@ -13,6 +13,10 @@ export const Container = styled.button<ContainerProps>`
  cursor: pointer;
 
 
+ &:disabled{
+  background:#ccc;
+ }
+
  &:hover{
   filter: brightness(96%);
 
