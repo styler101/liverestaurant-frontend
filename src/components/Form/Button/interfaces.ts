@@ -6,4 +6,5 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   icon?: React.ComponentType<IconBaseProps>
   color: string
   disabled?: boolean
+  loading?: boolean
 }

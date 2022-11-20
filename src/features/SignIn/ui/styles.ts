@@ -9,6 +9,11 @@ export const Container = styled.div`
  justify-content: center;
  margin: 0;
  overflow-y: hidden;
+
+ button{
+  max-width:316px;
+
+ }
 `
 
 export const LeftContent = styled.div`

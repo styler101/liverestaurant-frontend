@@ -5,10 +5,11 @@ import * as Fi from 'react-icons/fi'
 import * as Fc from 'react-icons/fc'
 
 import { Input, Button } from '../../../components/Form'
+import { Spinner } from '../../../components/Spinner'
 
-import { FormValues } from './interfaces'
+import { FormValues } from '../interfaces'
 
-import schema from './schema'
+import schema from '../schema'
 
 import logo from '../../../assets/images/svg/ilustra.svg'
 import wrapper from '../../../assets/images/img/wrapper.jpg'
@@ -24,8 +25,7 @@ export const Ui = () => {
     }
   })
 
-  console.log()
-  console.log()
+  const isLoading = true
   const onSubmit = (data: FormValues) => console.log(data)
   return (
     <S.Container>
@@ -67,17 +67,16 @@ export const Ui = () => {
           color='#FF5A5F'
           disabled={!isValid}
           >
-          <S.ButtonLabel>Entrar</S.ButtonLabel>
+            {isLoading ? <Spinner width={20} height={20}/> : (<S.ButtonLabel>Entrar</S.ButtonLabel>)}
 
           </Button>
-        <Button color='#4285F4' >
+      </S.Form>
+      <Button color='#4285F4' >
           <S.EntrerWithGoogle>
             <Fc.FcGoogle size={20}/>
               <p>Entrar com o Google</p>
           </S.EntrerWithGoogle>
          </Button>
-      </S.Form>
-
       </S.RightContent>
 
     </S.Container>

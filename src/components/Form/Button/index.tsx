@@ -7,7 +7,9 @@ export const Button = (props: ButtonProps) => {
   return (
     <S.Container
       color={color}
-      disabled={disabled}>
+      disabled={disabled}
+
+      >
       {children}
     </S.Container>
   )
