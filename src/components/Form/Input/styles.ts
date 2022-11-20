@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 
 interface ContainerProps {
   error: boolean
+  loading?: boolean
 }
 export const Container = styled.div<ContainerProps>`
  display:flex;
@@ -10,10 +11,15 @@ export const Container = styled.div<ContainerProps>`
  border-radius: 4px;
  padding: 0 8px;
  width:100%;
+ input:-webkit-autofill {
+  background-color: #fff;
+ }
 
  & + div{
-  margin-top:16px;
- }
+    margin-top:8px;
+  }
+
+
 &:focus-within{
   border-color:#4285F4;
   svg{
@@ -56,9 +62,10 @@ ${(props) => props.error && css`
   svg{
     color:#FF5A5F;
   }
+`}
 
-
-
+${(props) => props.loading && css`
+  background-color:#eee;
 
 `}
 `

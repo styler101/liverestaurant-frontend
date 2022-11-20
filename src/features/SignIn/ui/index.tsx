@@ -8,15 +8,18 @@ import { Input, Button } from '../../../components/Form'
 import { Spinner } from '../../../components/Spinner'
 
 import { FormValues } from '../interfaces'
-
+import { authentication } from '../services'
 import schema from '../schema'
 
 import logo from '../../../assets/images/svg/ilustra.svg'
 import wrapper from '../../../assets/images/img/wrapper.jpg'
 import * as S from './styles'
+import { delay } from '../../../utils/timer'
 
 export const Ui = () => {
-  const { register, handleSubmit, formState: { errors, isValid } } = useForm<FormValues>({
+  const [loading, setLoading] = React.useState<boolean>(false)
+
+  const { register, handleSubmit, formState: { errors, isValid }, reset } = useForm<FormValues>({
     resolver: yupResolver(schema()),
     mode: 'onChange',
     defaultValues: {
@@ -25,8 +28,24 @@ export const Ui = () => {
     }
   })
 
-  const isLoading = true
-  const onSubmit = (data: FormValues) => console.log(data)
+  async function onSubmit({ email, password }: FormValues) {
+    setLoading(true)
+    try {
+      await delay(500)
+      const data = await authentication({ email, password })
+      console.log(data)
+      reset()
+      localStorage.setItem('@waiterapp', JSON.stringify(data))
+    } catch (error) {
+
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  console.log('Result', isValid || loading)
+  console.log('ISValid', isValid)
+
   return (
     <S.Container>
       <S.LeftContent>
@@ -50,24 +69,24 @@ export const Ui = () => {
            name="email"
            register={register}
            error={ Boolean(errors.email)}
+           loading={loading}
            />
-          <span className='warning-text'> {errors.email && errors.email.message}</span>
+           {errors.email && <span className='warning-text'>{errors.email.message}</span>}
         <Input
           icon={Fi.FiLock}
           type="password"
           placeholder="Senha"
-          width={256}
-          height={42}
           name="password"
           register={register}
           error={ Boolean(errors.password)}
+          loading={loading}
           />
-          <span className='warning-text'> {errors.password && errors.password.message}</span>
+         {errors.password && <span className='warning-text'>{errors.password.message} </span>}
         <Button
           color='#FF5A5F'
-          disabled={!isValid}
+          disabled={(loading || !isValid)}
           >
-            {isLoading ? <Spinner width={20} height={20}/> : (<S.ButtonLabel>Entrar</S.ButtonLabel>)}
+            {loading ? <Spinner width={20} height={20}/> : (<S.ButtonLabel>Entrar</S.ButtonLabel>)}
 
           </Button>
       </S.Form>
