@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+   app:
+    image: 'node:18.12-alpine3.16'
+    container_name: 'waiterapp-frontend'
+    ports:
+    - '5173:5173'
+    command: yarn dev
+    working_dir: /app
+    volumes:
+     - .:/app
