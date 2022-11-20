@@ -10,7 +10,13 @@ export const Container = styled.button<ContainerProps>`
  margin-top: 16px;
  background-color: ${(props) => props.color};
  border:0;
+ cursor: pointer;
 
+
+ &:hover{
+  filter: brightness(96%);
+
+ }
 
 
 `

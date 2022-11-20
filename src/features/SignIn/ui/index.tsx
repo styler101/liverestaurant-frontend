@@ -22,16 +22,16 @@ export const Ui = () => {
 
       <S.Form>
         <img src={logo} alt="logo"/>
-        <strong> Faça seu Login </strong>
+        <strong> Faça seu login </strong>
         <Input
            icon={FiMail}
-           placeholder="Informe o seu email"
+           placeholder="Email"
            width={256}
            height={42}
            />
         <Input
           icon={FiLock}
-          placeholder="Informe a sua senha"
+          placeholder="Senha"
           width={256}
           height={42}
           />

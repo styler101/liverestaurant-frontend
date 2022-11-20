@@ -8,6 +8,16 @@ export const Container = styled.div`
  padding: 0 8px;
  width:100%;
 
+&:focus-within{
+  border-color:#4285F4;
+  svg{
+    color: #4285F4;
+  }
+}
+
+
+
+
  svg{
   color: #c8c8c8c8;
  }
@@ -17,14 +27,20 @@ export const Container = styled.div`
   outline:0;
   border-radius: 0 4px 4px 0;
   margin-left: 8px;
-  color: #1a1a1d;
+  color: #111111;
+  flex:1;
+  background-color: transparent;
+
+
   &::placeholder{
     color:#c8c8c8c8;
 
   }
-}
 
- & + div{
-  margin-top: 16px;
- }
+
+}
+& + div{
+    margin-top:16px;
+  }
+
 `

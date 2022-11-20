@@ -46,7 +46,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body, input, button{
-    font-family: 'GeneralSans';
+    font-family: 'Lato', sans-serif;
   }
   html, body, #root {
     background: #fafafa;

@@ -10,6 +10,7 @@ export const Container = styled.div`
  margin: 0;
  overflow-y: hidden;
 `
+
 export const LeftContent = styled.div`
  flex:1;
  align-items: stretch;
@@ -113,6 +114,7 @@ export const Form = styled.form`
 
  input{
   height:42px;
+
  }
 `
 
@@ -132,7 +134,6 @@ export const EntrerWithGoogle = styled.div`
 `
 
 export const ButtonLabel = styled.span`
-
  display:flex;
  align-items:center;
  justify-content: center;
