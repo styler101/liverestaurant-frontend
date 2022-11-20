@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import * as Animations from './animations'
 
 export const Container = styled.div`
  width:100%;
@@ -39,6 +40,7 @@ export const LeftContent = styled.div`
       color:#fff;
       font-weight: semi-bold;
       margin: 0;
+      animation: ${Animations.MoveDown} 1.5s ease-out ;
       span{
         font-weight: 300;
       }
@@ -53,6 +55,7 @@ export const LeftContent = styled.div`
     text-align: center;
     box-shadow: 1px solid #000;
     font-weight:normal;
+    animation: ${Animations.MoveRight} 2s ease-out ;
    }
  }
 `
@@ -74,7 +77,6 @@ export const RightContent = styled.div`
   align-items: center;
   justify-content: center;
 
-
   img{
     width:80px;
     height: 80px;
@@ -93,6 +95,8 @@ export const Form = styled.form`
  flex-direction:column;
  align-items:center;
  justify-content: center;
+ animation: ${Animations.MoveUp} 0.5s ease-out ;
+
 
  img{
   width:300px;
@@ -103,8 +107,8 @@ export const Form = styled.form`
   margin: 16px;
   font-size:24px;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-  color:#999999;
-  font-weight: normal;
+  color:#c8c8c8;
+  font-weight: 600;
  }
 
  input{

@@ -2,6 +2,7 @@ import React from 'react'
 import { Input, Button } from '../../../components/Form'
 import { FiMail, FiLock } from 'react-icons/fi'
 import { FcGoogle } from 'react-icons/fc'
+
 import logo from '../../../assets/images/svg/ilustra.svg'
 import wrapper from '../../../assets/images/img/wrapper.jpg'
 import * as S from './styles'
@@ -21,7 +22,7 @@ export const Ui = () => {
 
       <S.Form>
         <img src={logo} alt="logo"/>
-        <strong> Faça seu Logon </strong>
+        <strong> Faça seu Login </strong>
         <Input
            icon={FiMail}
            placeholder="Informe o seu email"
