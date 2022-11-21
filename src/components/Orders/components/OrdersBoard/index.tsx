@@ -1,9 +1,11 @@
 import React from 'react'
+
+import { OrderModal } from '@/components/OrderModal'
+import { Order } from '@/types/Order'
 import { OrdersBoardProps } from './interfaces'
-// import mock from '../../../../mocks/Orders/order.json'
+
 import * as S from './styles'
-import { OrderModal } from '../../../OrderModal'
-import { Order } from '../../../../types/Order'
+
 export function OrdersBoard (props: OrdersBoardProps) {
   const { title, icon, orders } = props
   const [openedModal, setOpenedModal] = React.useState<JSX.Element | null>(null)
@@ -13,6 +15,7 @@ export function OrdersBoard (props: OrdersBoardProps) {
         data={ { ...order }}
         closeModal={setOpenedModal}/>)
   }
+
   return (
     <S.Board>
     <header>

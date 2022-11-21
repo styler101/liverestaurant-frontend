@@ -1,9 +1,9 @@
 import React from 'react'
 import { OrdersBoard } from './components/OrdersBoard'
-import timerIcon from '../../assets/images/svg/timer.svg'
-import cookIcon from '../../assets/images/svg/cookie.svg'
-import checkedIcon from '../../assets/images/svg/checked.svg'
-import { orders } from '../../mocks/Orders/order'
+import timerIcon from '@/assets/images/svg/timer.svg'
+import cookIcon from '@/assets/images/svg/cookie.svg'
+import checkedIcon from '@/assets/images/svg/checked.svg'
+import { orders } from '@/mocks/Orders/order'
 import * as S from './styles'
 
 export function Orders () {

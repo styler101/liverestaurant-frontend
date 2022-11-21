@@ -1,4 +1,4 @@
-import { Order } from '../../../../types/Order'
+import { Order } from '@/types/Order'
 export interface OrdersBoardProps {
   title: string
   icon: string

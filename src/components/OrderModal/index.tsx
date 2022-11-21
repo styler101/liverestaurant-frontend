@@ -1,17 +1,14 @@
-import React, { SetStateAction, useEffect } from 'react'
-import { FiX } from 'react-icons/fi'
-import { GrInProgress } from 'react-icons/gr'
-import timer from '../../assets/images/svg/timer.svg'
-import checked from '../../assets/images/svg/checked.svg'
+import React, { useEffect } from 'react'
+import * as Fi from 'react-icons/fi'
+import * as Gr from 'react-icons/gr'
 
-import { Order } from '../../types/Order'
-import { formatCurrency } from '../../utils/Formaters/formatCurrency'
+import timer from '@/assets/images/svg/timer.svg'
+import checked from '@/assets/images/svg/checked.svg'
+import { formatCurrency } from '@/utils/Formaters/formatCurrency'
+import { OrderModalProps } from './interfaces'
+
 import * as S from './styles'
 
-interface OrderModalProps {
-  data: Order
-  closeModal: React.Dispatch<SetStateAction<JSX.Element | null>>
-}
 export function OrderModal (props: OrderModalProps) {
   const { closeModal } = props
   const { table, status, products } = props.data
@@ -36,7 +33,7 @@ export function OrderModal (props: OrderModalProps) {
         <header>
           <strong> { table } </strong>
           <button>
-            <FiX size={18} onClick={() => closeModal(null)}/>
+            <Fi.FiX size={18} onClick={() => closeModal(null)}/>
           </button>
         </header>
         <div className="status-container">
@@ -44,7 +41,7 @@ export function OrderModal (props: OrderModalProps) {
           <div>
             <span>
               {status === 'WAITING' && <img src={timer} alt="timer image"/>}
-              {status === 'IN_PRODUCTION' && <GrInProgress/>}
+              {status === 'IN_PRODUCTION' && <Gr.GrInProgress/>}
               {status === 'DONE' && <img src={checked}/>}
             </span>
 

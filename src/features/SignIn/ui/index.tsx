@@ -6,17 +6,17 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as Fi from 'react-icons/fi'
 import * as Fc from 'react-icons/fc'
 
-import { Input, Button } from '../../../components/Form'
-import { Spinner } from '../../../components/Spinner'
+import { Input, Button } from '@/components/Form'
+import { Spinner } from '@/components/Spinner'
 
 import { FormValues } from '../interfaces'
 import { authentication } from '../services'
 import schema from '../schema'
 
-import logo from '../../../assets/images/svg/ilustra.svg'
-import wrapper from '../../../assets/images/img/wrapper.jpg'
+import logo from '@/assets/images/svg/ilustra.svg'
+import wrapper from '@/assets/images/img/wrapper.jpg'
 import * as S from './styles'
-import { delay } from '../../../utils/Formaters/timer'
+import { delay } from '@/utils/Formaters/timer'
 
 export const Ui = () => {
   const [loading, setLoading] = React.useState<boolean>(false)
