@@ -91,13 +91,14 @@ export const Ui = () => {
           </Button>
 
       </S.Form>
-
-      <Button color='#4285F4'>
-          <S.EntrerWithGoogle>
-            <Fc.FcGoogle size={20}/>
-              <p>Entrar com o Google</p>
-          </S.EntrerWithGoogle>
-         </Button>
+      <S.GoogleWrapper>
+        <Button color='#4285F4'>
+            <S.EntrerWithGoogle>
+              <Fc.FcGoogle size={20}/>
+                <p>Entrar com o Google</p>
+            </S.EntrerWithGoogle>
+          </Button>
+        </S.GoogleWrapper>
       </S.RightContent>
 
     </S.Container>

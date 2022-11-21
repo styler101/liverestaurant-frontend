@@ -131,6 +131,13 @@ export const Form = styled.form`
  }
 `
 
+export const GoogleWrapper = styled.div`
+ width:360px;
+ animation: ${Animations.GoogleButtonAnimations} 2s ease-in-out ;
+ display:flex;
+ align-items:center;
+ justify-content: center;
+`
 export const EntrerWithGoogle = styled.div`
  display:flex;
  align-items:center;
@@ -142,7 +149,6 @@ export const EntrerWithGoogle = styled.div`
   font-weight: 600;
   display:block;
   margin-left:8px;
-
  }
 `
 

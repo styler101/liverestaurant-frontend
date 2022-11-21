@@ -50,3 +50,21 @@ export const MoveUp = keyframes`
 
  }
 `
+
+export const GoogleButtonAnimations = keyframes`
+
+ 0%{
+  opacity:  0;
+  transform: translateX(-90px);
+ }
+
+ 75%{
+  opacity: 0.4;
+
+ }
+
+ 100%{
+  opacity: 1;
+  transform: translateY(0px);
+ }
+`
