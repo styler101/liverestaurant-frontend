@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
+import { toast } from 'react-toastify'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as Fi from 'react-icons/fi'
 import * as Fc from 'react-icons/fc'
@@ -34,11 +35,12 @@ export const Ui = () => {
     try {
       await delay(500)
       const data = await authentication({ email, password })
-      reset()
+      await reset()
       localStorage.setItem('@waiterapp', JSON.stringify(data))
+      await toast.success('Usuário autenticado com sucesso!')
       navigate('/dashboard')
     } catch (error) {
-
+      await toast.error('Erro ao realizar a autenticação!')
     } finally {
       setLoading(false)
     }
@@ -59,6 +61,7 @@ export const Ui = () => {
       <S.Form onSubmit={handleSubmit(onSubmit)}>
         <img src={logo} alt="logo"/>
         <strong> Faça seu login </strong>
+
         <Input
            icon={Fi.FiMail}
            placeholder="Email"
@@ -70,6 +73,7 @@ export const Ui = () => {
            loading={loading}
            />
            {errors.email && <span className='warning-text'>{errors.email.message}</span>}
+
         <Input
           icon={Fi.FiLock}
           type="password"
@@ -79,16 +83,16 @@ export const Ui = () => {
           error={ Boolean(errors.password)}
           loading={loading}
           />
-         {errors.password && <span className='warning-text'>{errors.password.message} </span>}
-        <Button
-          color='#FF5A5F'
-          disabled={(loading || !isValid)}
-          >
-            {loading ? <Spinner width={20} height={20}/> : (<S.ButtonLabel>Entrar</S.ButtonLabel>)}
 
+         {errors.password && <span className='warning-text'>{errors.password.message} </span>}
+
+        <Button color='#FF5A5F' disabled={(loading || !isValid)}>
+            {loading ? <Spinner width={20} height={20}/> : (<S.ButtonLabel>Entrar</S.ButtonLabel>)}
           </Button>
+
       </S.Form>
-      <Button color='#4285F4' >
+
+      <Button color='#4285F4'>
           <S.EntrerWithGoogle>
             <Fc.FcGoogle size={20}/>
               <p>Entrar com o Google</p>
