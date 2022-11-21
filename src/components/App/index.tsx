@@ -1,13 +1,13 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import { Routes } from '../../routes'
 import { GlobalStyles } from '../../assets/styles/global'
-import { SignIn } from '../../pages/SignIn'
 
 export function App () {
   return (
-    <React.Fragment>
-      <SignIn/>
-      <GlobalStyles/>
-    </React.Fragment>
-
+      <BrowserRouter>
+          <Routes/>
+          <GlobalStyles/>
+      </BrowserRouter>
   )
 }

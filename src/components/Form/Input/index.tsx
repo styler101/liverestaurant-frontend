@@ -9,7 +9,7 @@ export const Input = (props: InputProps) => {
 
       <S.Container className='container'error={error} loading={loading} >
         {(Component != null) && <Component size={20} />}
-          <input {...register(name)} { ...rest} disabled={loading} autoComplete="off"/>
+          <input {...register(name)} { ...rest} disabled={loading} autoComplete="false"/>
       </S.Container>
 
   )

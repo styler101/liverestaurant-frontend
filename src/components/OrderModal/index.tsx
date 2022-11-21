@@ -5,7 +5,7 @@ import timer from '../../assets/images/svg/timer.svg'
 import checked from '../../assets/images/svg/checked.svg'
 
 import { Order } from '../../types/Order'
-import { formatCurrency } from '../../utils/formatCurrency'
+import { formatCurrency } from '../../utils/Formaters/formatCurrency'
 import * as S from './styles'
 
 interface OrderModalProps {

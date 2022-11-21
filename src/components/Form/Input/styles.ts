@@ -42,8 +42,9 @@ export const Container = styled.div<ContainerProps>`
   color: #111111;
   flex:1;
   background-color: transparent;
-
-
+  input:-internal-autofill-selected{
+    background-color:#fff !important;
+  }
   &::placeholder{
     color:#c8c8c8c8;
 
