@@ -38,7 +38,7 @@ export const Ui = () => {
       await reset()
       localStorage.setItem('@waiterapp', JSON.stringify(data))
       await toast.success('Usuário autenticado com sucesso!')
-      navigate('/dashboard')
+      navigate('/main/home')
     } catch (error) {
       await toast.error('Erro ao realizar a autenticação!')
     } finally {

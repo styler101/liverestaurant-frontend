@@ -1,8 +1,9 @@
 import React from 'react'
+import { HeaderProps } from './interfaces'
 import logo from '@/assets/images/svg/logo.svg'
 import * as S from './styles'
 
-export function Header () {
+export function Header ({ title, description }: HeaderProps) {
   return (
     <S.Container>
     <S.Content>

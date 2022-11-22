@@ -7,6 +7,7 @@ interface RouteProps {
 
 export const PrivateRoute = ({ children }: RouteProps): JSX.Element => {
   const storagedData = localStorage.getItem('@waiterapp')
+
   const { accessToken }: any = storagedData ? JSON.parse(storagedData) : {}
   return accessToken ? children : <Navigate to="/" replace/>
 }

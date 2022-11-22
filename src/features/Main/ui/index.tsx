@@ -1,13 +1,19 @@
 import React from 'react'
-import { Content, Header, Sidebar } from '@/layout'
+import { Outlet } from 'react-router-dom'
+import { Header, Sidebar } from '@/layout'
+
 import * as S from './styles'
 
-export function Main() {
+export function Ui() {
   return (
     <S.Container>
         <Header/>
-        <Sidebar/>
-        <Content/>
+        <S.Wrapper>
+          <Sidebar/>
+          <S.Main>
+            <Outlet/>
+          </S.Main>
+        </S.Wrapper>
     </S.Container>
   )
 }
