@@ -24,6 +24,8 @@
       "@typescript-eslint/prefer-optional-chain": "off",
       "@typescript-eslint/strict-boolean-expressions": "off",
       "@typescript-eslint/prefer-nullish-coalescing": "off",
-      "react/jsx-no-duplicate-props": "off"
+      "react/jsx-no-duplicate-props": "off",
+      "@typescript-eslint/consistent-type-assertions": "off",
+      "multiline-ternary": "off"
     }
 }

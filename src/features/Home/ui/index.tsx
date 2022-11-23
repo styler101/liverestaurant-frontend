@@ -1,10 +1,14 @@
 import React from 'react'
+import { Header } from '@/components/Header'
 import * as S from './styles'
 
-export function Ui () {
+export function Ui() {
   return (
     <S.Container>
-      <h1> Teste </h1>
+      <Header
+        title="Painel de Atendimento"
+        description="Utilize os recuros abaixo para monitorar o faturamento do restaurante"
+      />
     </S.Container>
   )
 }

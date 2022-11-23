@@ -13,10 +13,9 @@ export function Routes(): JSX.Element {
         <Route index path="/"element={<SignIn/>}/>
         <Route path="*" element={<Error404/>}/>
         <Route path="/main" element={<PrivateRoute><Main/></PrivateRoute>}>
-        <Route path="home" element={<Home/>}/>
-        <Route path ="orders" element={ <Orders/>}/>
+          <Route path="home" element={<Home/>}/>
+          <Route path ="orders" element={ <Orders/>}/>
         </Route>
-
     </Switch>
   )
 }

@@ -23,7 +23,7 @@ export const Ui = () => {
   const navigate = useNavigate()
   const { register, handleSubmit, formState: { errors, isValid }, reset } = useForm<FormValues>({
     resolver: yupResolver(schema()),
-    mode: 'onChange',
+    mode: 'onBlur',
     defaultValues: {
       email: '',
       password: ''
