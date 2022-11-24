@@ -26,6 +26,7 @@
       "@typescript-eslint/prefer-nullish-coalescing": "off",
       "react/jsx-no-duplicate-props": "off",
       "@typescript-eslint/consistent-type-assertions": "off",
-      "multiline-ternary": "off"
+      "multiline-ternary": "off",
+      "@typescript-eslint/comma-dangle": "off"
     }
 }

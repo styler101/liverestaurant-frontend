@@ -10,7 +10,7 @@ export function MainContext({ children }: MainContextProps) {
     setMenuActive((prev) => !prev)
   }
   return (
-    <Context.Provider value={{ menuActive, handleToggleMenu }}>
+    <Context.Provider value={{ menuActive, handleToggleMenu, setMenuActive }}>
       {children}
     </Context.Provider>
   )

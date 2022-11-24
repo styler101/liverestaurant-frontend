@@ -5,12 +5,14 @@ import * as Io from 'react-icons/io'
 import * as Fa from 'react-icons/fa'
 
 import * as S from './styles'
+import useOnClickOutSide from '@/hooks/useClickoutSide'
 
 export function Sidebar() {
-  const { menuActive } = useContext(Context)
+  const { menuActive, setMenuActive } = useContext(Context)
+  const menuRef = useOnClickOutSide(() => setMenuActive((prev) => prev))
 
   return (
-    <S.Container menuActive={menuActive}>
+    <S.Container menuActive={menuActive} ref={menuRef}>
       <S.Item menuActive={menuActive}>
         <Io.IoMdHome size={23} color="#fff" />
         <div>

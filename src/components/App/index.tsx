@@ -6,12 +6,12 @@ import { GlobalStyles } from '@/assets/styles/global'
 
 import 'react-toastify/dist/ReactToastify.css'
 
-export function App () {
+export function App() {
   return (
-      <BrowserRouter>
-          <Routes/>
-          <ToastContainer position="top-right" autoClose={3000}/>
-          <GlobalStyles/>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Routes />
+      <ToastContainer position="top-right" autoClose={3000} />
+      <GlobalStyles />
+    </BrowserRouter>
   )
 }

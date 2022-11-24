@@ -21,13 +21,18 @@ import { delay } from '@/utils/Formaters/timer'
 export const Ui = () => {
   const [loading, setLoading] = React.useState<boolean>(false)
   const navigate = useNavigate()
-  const { register, handleSubmit, formState: { errors, isValid }, reset } = useForm<FormValues>({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+    reset,
+  } = useForm<FormValues>({
     resolver: yupResolver(schema()),
-    mode: 'onBlur',
+    mode: 'onSubmit',
     defaultValues: {
       email: '',
-      password: ''
-    }
+      password: '',
+    },
   })
 
   async function onSubmit({ email, password }: FormValues) {
@@ -49,58 +54,70 @@ export const Ui = () => {
   return (
     <S.Container>
       <S.LeftContent>
-        <img src={wrapper} alt="restaurant image"/>
+        <img src={wrapper} alt="restaurant image" />
         <div className="welcome">
-          <h1> Waiter<span> App</span></h1>
-          <h2> Gerencie os pedidos do seu restaurante de uma forma simples e intuitiva.</h2>
+          <h1>
+            {' '}
+            Waiter<span> App</span>
+          </h1>
+          <h2>
+            {' '}
+            Gerencie os pedidos do seu restaurante de uma forma simples e
+            intuitiva.
+          </h2>
         </div>
       </S.LeftContent>
 
       <S.RightContent>
+        <S.Form onSubmit={handleSubmit(onSubmit)}>
+          <img src={logo} alt="logo" />
+          <strong> Faça seu login </strong>
 
-      <S.Form onSubmit={handleSubmit(onSubmit)}>
-        <img src={logo} alt="logo"/>
-        <strong> Faça seu login </strong>
+          <Input
+            icon={Fi.FiMail}
+            placeholder="Email"
+            width={256}
+            height={42}
+            name="email"
+            register={register}
+            error={Boolean(errors.email)}
+            loading={loading}
+          />
+          {errors.email && (
+            <span className="warning-text">{errors.email.message}</span>
+          )}
 
-        <Input
-           icon={Fi.FiMail}
-           placeholder="Email"
-           width={256}
-           height={42}
-           name="email"
-           register={register}
-           error={ Boolean(errors.email)}
-           loading={loading}
-           />
-           {errors.email && <span className='warning-text'>{errors.email.message}</span>}
-
-        <Input
-          icon={Fi.FiLock}
-          type="password"
-          placeholder="Senha"
-          name="password"
-          register={register}
-          error={ Boolean(errors.password)}
-          loading={loading}
+          <Input
+            icon={Fi.FiLock}
+            type="password"
+            placeholder="Senha"
+            name="password"
+            register={register}
+            error={Boolean(errors.password)}
+            loading={loading}
           />
 
-         {errors.password && <span className='warning-text'>{errors.password.message} </span>}
+          {errors.password && (
+            <span className="warning-text">{errors.password.message} </span>
+          )}
 
-        <Button color='#FF5A5F' disabled={(loading || !isValid)}>
-            {loading ? <Spinner width={20} height={20}/> : (<S.ButtonLabel>Entrar</S.ButtonLabel>)}
+          <Button color="#FF5A5F" disabled={loading || !isValid}>
+            {loading ? (
+              <Spinner width={20} height={20} />
+            ) : (
+              <S.ButtonLabel>Entrar</S.ButtonLabel>
+            )}
           </Button>
-
-      </S.Form>
-      <S.GoogleWrapper>
-        <Button color='#4285F4'>
+        </S.Form>
+        <S.GoogleWrapper>
+          <Button color="#4285F4">
             <S.EntrerWithGoogle>
-              <Fc.FcGoogle size={20}/>
-                <p>Entrar com o Google</p>
+              <Fc.FcGoogle size={20} />
+              <p>Entrar com o Google</p>
             </S.EntrerWithGoogle>
           </Button>
         </S.GoogleWrapper>
       </S.RightContent>
-
     </S.Container>
   )
 }

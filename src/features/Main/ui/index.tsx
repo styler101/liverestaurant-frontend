@@ -9,12 +9,13 @@ export function Ui() {
     <MainContext>
       <S.Container>
         <Header />
-        <S.Wrapper>
+
+        <S.Content>
           <Sidebar />
           <S.Main>
             <Outlet />
           </S.Main>
-        </S.Wrapper>
+        </S.Content>
       </S.Container>
     </MainContext>
   )

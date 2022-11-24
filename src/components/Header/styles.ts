@@ -4,7 +4,7 @@ export const Container = styled.header`
   width: 100%;
   border-bottom: 1px solid #d6d6d6;
   h2 {
-    font-size: 28px;
+    font-size: 22px;
     margin: 0;
     padding: 0;
     color: #192338;
