@@ -1,15 +1,14 @@
 {
   "chart": {
-    "type": "column"
+    "type": "column",
+    "backgroundColor": null
   },
+
   "title": {
-    "align": "left",
-    "text": "Browser market shares. January, 2022"
+    "align": null,
+    "text": null
   },
-  "subtitle": {
-    "align": "left",
-    "text": "Click the columns to view versions. Source: <a href=\"http://statcounter.com\" target=\"_blank\">statcounter.com</a>"
-  },
+
   "accessibility": {
     "announceNewData": {
       "enabled": true
@@ -20,8 +19,11 @@
   },
   "yAxis": {
     "title": {
-      "text": "Total percent market share"
+      "text": null
     }
+  },
+  "credits": {
+    "enabled": false
   },
   "legend": {
     "enabled": false
@@ -38,47 +40,57 @@
 
   "tooltip": {
     "headerFormat": "<span style=\"font-size:11px\">{series.name}</span><br>",
-    "pointFormat": "<span style=\"color:{point.color}\">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>"
+    "pointFormat": "<span style=\"color:{point.color}\">{point.name}</span> total de : <b>{point.y:.2f}%</b>  <br/>"
   },
 
+  "colors": [
+    "#003049",
+    "#d62828",
+    "#f77f00",
+    "#fcbf49",
+    "#eae2b7",
+    "#000",
+    "#06d6a0"
+  ],
   "series": [
     {
-      "name": "Browsers",
+      "name": "Percentual do dia",
       "colorByPoint": true,
+      "textAlign": "center",
       "data": [
         {
-          "name": "Chrome",
+          "name": "Domingo",
           "y": 63.06,
           "drilldown": "Chrome"
         },
         {
-          "name": "Safari",
+          "name": "Segunda-Feira",
           "y": 19.84,
           "drilldown": "Safari"
         },
         {
-          "name": "Firefox",
+          "name": "Terça-Feira",
           "y": 4.18,
           "drilldown": "Firefox"
         },
         {
-          "name": "Edge",
+          "name": "Quarta-Feira",
           "y": 4.12,
           "drilldown": "Edge"
         },
         {
-          "name": "Opera",
+          "name": "Quinta-Feira",
           "y": 2.33,
           "drilldown": "Opera"
         },
         {
-          "name": "Internet Explorer",
+          "name": "Sexta-Feita",
           "y": 0.45,
           "drilldown": "Internet Explorer"
         },
         {
-          "name": "Other",
-          "y": 1.582,
+          "name": "Sábado",
+          "y": 72.0,
           "drilldown": null
         }
       ]

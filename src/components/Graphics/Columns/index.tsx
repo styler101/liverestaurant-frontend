@@ -1,8 +1,15 @@
 import React from 'react'
+import { Segment } from 'semantic-ui-react'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
-import mock from './mock.json'
+import { ColumnProps } from './interface'
 
-export function Columns() {
-  return <HighchartsReact highcharts={Highcharts} options={mock} />
+export function Columns(props: ColumnProps) {
+  const { header, options } = props
+  return (
+    <Segment>
+      {header}
+      <HighchartsReact highcharts={Highcharts} options={options} />
+    </Segment>
+  )
 }
