@@ -1,6 +1,6 @@
 import React from 'react'
 import { Header } from '@/components/Header'
-import { Bars } from '../components/Bars'
+import { Columns } from '@/components/Graphics'
 import * as S from './styles'
 
 export function Ui() {
@@ -10,7 +10,7 @@ export function Ui() {
         title="Painel de Atendimento"
         description="Utilize os recuros abaixo para monitorar o faturamento do restaurante"
       />
-      <Bars />
+      <Columns />
     </S.Container>
   )
 }
