@@ -52,6 +52,7 @@ export const GlobalStyles = createGlobalStyle`
     background: #fafafa;
     color: #333;
     min-height: 100%;
+    overflow:hidden;
   }
   button {
     cursor: pointer;
@@ -63,4 +64,5 @@ export const GlobalStyles = createGlobalStyle`
   input:-webkit-autofill:focus {
     transition: background-color 600000s 0s, color 600000s 0s;
   }
+
 `

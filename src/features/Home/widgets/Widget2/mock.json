@@ -6,7 +6,10 @@
     "type": "pie"
   },
   "title": {
-    "text": "Browser market shares in March, 2022"
+    "text": null
+  },
+  "credits": {
+    "enabled": false
   },
   "tooltip": {
     "pointFormat": "{series.name}: <b>{point.percentage:.1f}%</b>"
@@ -26,36 +29,43 @@
       "showInLegend": true
     }
   },
+
   "series": [
     {
-      "name": "Brands",
+      "name": "produto",
       "colorByPoint": true,
       "data": [
         {
-          "name": "Chrome",
-          "y": 74.77,
-          "sliced": true,
-          "selected": true
+          "name": "Macarrão na Chapa",
+          "y": 35.77,
+          "sliced": false,
+          "selected": true,
+          "color": "#d62828"
         },
         {
-          "name": "Edge",
-          "y": 12.82
+          "name": "Brahma Litrão",
+          "y": 13.82,
+          "color": "#f77f00"
         },
         {
-          "name": "Firefox",
-          "y": 4.63
+          "name": "Escondidinho",
+          "y": 16.63,
+          "color": "#06d6a0"
         },
         {
-          "name": "Safari",
-          "y": 2.44
+          "name": "Frango a Passarinho",
+          "y": 10,
+          "color": "#0466c8"
         },
         {
-          "name": "Internet Explorer",
-          "y": 2.02
+          "name": "Costelinha de Porco Frita",
+          "y": 15,
+          "color": "#ff477e"
         },
         {
-          "name": "Other",
-          "y": 3.28
+          "name": "Cup Cake de Chocolate",
+          "y": 10.09,
+          "color": "#390099"
         }
       ]
     }

@@ -14,6 +14,19 @@ export function Ui() {
       <S.Wrapper>
         <Toolbar />
       </S.Wrapper>
+
+      <S.CardsArea>
+        <Widget1 />
+        <Widget2 />
+      </S.CardsArea>
+      <S.CardsArea>
+        <Widget1 />
+        <Widget2 />
+      </S.CardsArea>
+      <S.CardsArea>
+        <Widget1 />
+        <Widget2 />
+      </S.CardsArea>
       <S.CardsArea>
         <Widget1 />
         <Widget2 />

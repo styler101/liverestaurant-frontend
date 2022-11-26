@@ -4,12 +4,12 @@ interface ContainerProps {
   menuActive: boolean
 }
 export const Container = styled.nav<ContainerProps>`
-  position: absolute;
+  position: fixed;
   left: 0;
-  top: 0;
+  top: 70px;
   z-index: 9;
   background: #d73035;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 71px);
   width: ${(props) => (props.menuActive ? '220px' : '56px')};
   display: flex;
   flex-direction: column;
