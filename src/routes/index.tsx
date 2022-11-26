@@ -5,17 +5,26 @@ import { Main } from '@/pages/Main'
 import { Orders } from '@/pages/Orders'
 import { Home } from '@/pages/Home'
 import { Error404 } from '@/pages/Error404'
+import { Clients } from '@/pages/Clients'
 import { PrivateRoute } from '@/utils/PrivateRoute'
 
 export function Routes(): JSX.Element {
   return (
     <Switch>
-        <Route index path="/"element={<SignIn/>}/>
-        <Route path="*" element={<Error404/>}/>
-        <Route path="/main" element={<PrivateRoute><Main/></PrivateRoute>}>
-          <Route path="home" element={<Home/>}/>
-          <Route path ="orders" element={ <Orders/>}/>
-        </Route>
+      <Route index path="/" element={<SignIn />} />
+      <Route path="*" element={<Error404 />} />
+      <Route
+        path="/main"
+        element={
+          <PrivateRoute>
+            <Main />
+          </PrivateRoute>
+        }
+      >
+        <Route path="home" element={<Home />} />
+        <Route path="orders" element={<Orders />} />
+        <Route path="clients" element={<Clients />} />
+      </Route>
     </Switch>
   )
 }

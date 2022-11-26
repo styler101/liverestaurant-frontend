@@ -26,6 +26,7 @@ export const Main = styled.div`
 
 export const Article = styled.article`
   flex: 1;
+  height: 100vh;
   overflow-y: auto;
   padding: 16px;
 `
