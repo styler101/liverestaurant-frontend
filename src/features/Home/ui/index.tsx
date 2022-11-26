@@ -1,7 +1,8 @@
 import React from 'react'
+import { Grid } from 'semantic-ui-react'
 import { Header } from '@/components/Header'
 import { Toolbar } from '../components/Toolbar'
-import { Widget1, Widget2 } from '../widgets'
+import { DailyPerformance, TopSells, WeeekendIncome } from '../widgets'
 import * as S from './styles'
 
 export function Ui() {
@@ -16,20 +17,19 @@ export function Ui() {
       </S.Wrapper>
 
       <S.CardsArea>
-        <Widget1 />
-        <Widget2 />
-      </S.CardsArea>
-      <S.CardsArea>
-        <Widget1 />
-        <Widget2 />
-      </S.CardsArea>
-      <S.CardsArea>
-        <Widget1 />
-        <Widget2 />
-      </S.CardsArea>
-      <S.CardsArea>
-        <Widget1 />
-        <Widget2 />
+        <Grid>
+          <Grid.Row columns={'equal'}>
+            <Grid.Column>
+              <DailyPerformance />
+            </Grid.Column>
+            <Grid.Column>
+              <TopSells />
+            </Grid.Column>
+            <Grid.Column>
+              <WeeekendIncome />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </S.CardsArea>
     </S.Container>
   )

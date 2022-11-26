@@ -1,7 +1,8 @@
 {
   "chart": {
     "type": "column",
-    "backgroundColor": null
+    "backgroundColor": null,
+    "height": "300px"
   },
 
   "title": {

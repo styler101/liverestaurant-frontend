@@ -4,7 +4,7 @@ import * as S from '../styled'
 import { Columns } from '@/components/Graphics'
 import mock from './mock.json'
 
-export function Widget1() {
+export function WeeekendIncome() {
   return (
     <Columns
       header={

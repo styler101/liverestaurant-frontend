@@ -4,7 +4,7 @@ import mock from './mock.json'
 import * as S from '../styled'
 import { AiOutlineExpandAlt } from 'react-icons/ai'
 
-export function Widget2() {
+export function TopSells() {
   return (
     <Pie
       header={

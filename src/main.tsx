@@ -5,7 +5,5 @@ import { App } from './components/App'
 import 'semantic-ui-css/semantic.min.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <App />
 )

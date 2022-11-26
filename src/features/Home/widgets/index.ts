@@ -1,2 +1,3 @@
-export * from './Widget1'
-export * from './Widget2'
+export * from './DailyPerformance'
+export * from './TopSells'
+export * from './WeekndIncome'
