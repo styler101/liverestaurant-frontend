@@ -1,7 +1,7 @@
 import React from 'react'
 import { Header } from '@/components/Header'
 import { Toolbar } from '../components/Toolbar'
-import { Widget1 } from '../widgets/Widget1'
+import { Widget1, Widget2 } from '../widgets'
 import * as S from './styles'
 
 export function Ui() {
@@ -16,6 +16,7 @@ export function Ui() {
       </S.Wrapper>
       <S.CardsArea>
         <Widget1 />
+        <Widget2 />
       </S.CardsArea>
     </S.Container>
   )

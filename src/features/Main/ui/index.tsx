@@ -9,7 +9,6 @@ export function Ui() {
     <MainContext>
       <S.Container>
         <Header />
-
         <S.Content>
           <Sidebar />
           <S.Main>

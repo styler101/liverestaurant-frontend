@@ -4,7 +4,7 @@ import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import { GraphicProps } from '../interface'
 
-export function Columns(props: GraphicProps) {
+export function Pie(props: GraphicProps) {
   const { header, options } = props
   return (
     <Segment>

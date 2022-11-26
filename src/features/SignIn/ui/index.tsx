@@ -21,6 +21,7 @@ import { delay } from '@/utils/Formaters/timer'
 export const Ui = () => {
   const [loading, setLoading] = React.useState<boolean>(false)
   const navigate = useNavigate()
+
   const {
     register,
     handleSubmit,
