@@ -18,5 +18,11 @@ export const Main = styled.div`
   height: 100%;
   transform: translateX(50px);
   padding: 21px;
+
   width: 98vw;
+`
+
+export const Article = styled.article`
+  flex: 1;
+  padding: 16px;
 `

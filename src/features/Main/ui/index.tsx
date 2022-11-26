@@ -13,7 +13,9 @@ export function Ui() {
         <S.Content>
           <Sidebar />
           <S.Main>
-            <Outlet />
+            <S.Article>
+              <Outlet />
+            </S.Article>
           </S.Main>
         </S.Content>
       </S.Container>
