@@ -12,7 +12,15 @@ export const Content = styled.div`
   height: 100%;
   position: relative;
   top: 70px;
-  overflow-y: auto;
+  overflow-y: hidden;
+  z-index: 99;
+`
+export const Article = styled.article`
+  flex: 1;
+  height: 100vh;
+  overflow-y: hidden;
+  padding: 16px;
+  z-index: 99;
 `
 
 export const Main = styled.div`
@@ -22,11 +30,5 @@ export const Main = styled.div`
   padding: 21px;
   overflow-y: auto;
   width: 98vw;
-`
-
-export const Article = styled.article`
-  flex: 1;
-  height: 100vh;
-  overflow-y: auto;
-  padding: 16px;
+  z-index: 99;
 `

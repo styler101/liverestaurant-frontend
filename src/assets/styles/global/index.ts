@@ -65,4 +65,20 @@ export const GlobalStyles = createGlobalStyle`
     transition: background-color 600000s 0s, color 600000s 0s;
   }
 
+  ::-webkit-scrollbar {
+    width: 5px !important;
+    border-radius: 50% !important;
+  }
+  ::-webkit-scrollbar-track{
+    background:#ddd !important;
+    border-radius: 50% !important;
+  }
+  ::-webkit-scrollbar-thumb {
+  background: #d8d8d8 !important;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+  background: #ddd !important;
+}
+
+
 `
