@@ -1,0 +1,41 @@
+{
+  "chart": {
+    "type": "variablepie",
+    "backgroundColor": null
+  },
+  "credits": {
+    "enabled": false
+  },
+  "title": {
+    "text": null
+  },
+  "tooltip": {
+    "headerFormat": ""
+  },
+  "colors": ["#0466c8", "#06d6a0", "#ff477e"],
+  "series": [
+    {
+      "minPointSize": 10,
+      "innerSize": "50%",
+      "zMin": 0,
+      "name": "Vendas",
+      "data": [
+        {
+          "name": "Delivery",
+          "y": 30,
+          "z": 92
+        },
+        {
+          "name": "Local",
+          "y": 80,
+          "z": 119
+        },
+        {
+          "name": "Ifood",
+          "y": 100,
+          "z": 121
+        }
+      ]
+    }
+  ]
+}

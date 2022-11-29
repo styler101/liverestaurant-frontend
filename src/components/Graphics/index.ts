@@ -1,1 +1,5 @@
 export * from './Columns'
+export * from './SimpleCard'
+export * from './RadiusPie'
+export * from './Pie'
+export * from './SpeedGauge'

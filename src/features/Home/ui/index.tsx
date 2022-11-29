@@ -1,8 +1,15 @@
 import React from 'react'
-import { Grid } from 'semantic-ui-react'
+import { Grid, Card, CardGroup } from 'semantic-ui-react'
 import { Header } from '@/components/Header'
 import { Toolbar } from '../components/Toolbar'
-import { DailyPerformance, TopSells, WeeekendIncome } from '../widgets'
+import {
+  DailyPerformance,
+  TopSells,
+  WeeekendIncome,
+  DeliveryTypes,
+  TotalAmmount,
+} from '../widgets'
+
 import * as S from './styles'
 
 export function Ui() {
@@ -27,6 +34,27 @@ export function Ui() {
             </Grid.Column>
             <Grid.Column>
               <WeeekendIncome />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row columns={'equal'}>
+            <Grid.Column>
+              <DeliveryTypes />
+            </Grid.Column>
+            <Grid.Column stretched>
+              <CardGroup itemsPerRow={2}>
+                <Card>
+                  <TotalAmmount />
+                </Card>
+                <Card>
+                  <TotalAmmount />
+                </Card>
+                <Card>
+                  <TotalAmmount />
+                </Card>
+                <Card>
+                  <TotalAmmount />
+                </Card>
+              </CardGroup>
             </Grid.Column>
           </Grid.Row>
         </Grid>
