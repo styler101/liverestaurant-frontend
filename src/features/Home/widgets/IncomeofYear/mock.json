@@ -30,6 +30,8 @@
       "text": null
     }
   },
+
+  "colors": ["#06d6a0", "#d62828"],
   "credits": {
     "enabled": false
   },
