@@ -17,7 +17,7 @@ export const Content = styled.div`
 `
 export const Article = styled.article`
   flex: 1;
-  height: 100vh;
+  height: 100%;
   overflow-y: hidden;
   padding: 16px;
   z-index: 99;

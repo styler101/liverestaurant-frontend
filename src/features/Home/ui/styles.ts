@@ -5,11 +5,10 @@ import {
 } from 'semantic-ui-react'
 
 export const Container = styled.div`
-  height: 100vh;
+  height: 100% !important;
   overflow-y: scroll;
   position: relative;
   padding-right: 16px;
-  padding-bottom: 20px;
 `
 
 export const Wrapper = styled.div`
@@ -20,7 +19,7 @@ export const Wrapper = styled.div`
 
 export const CardsArea = styled.div`
   margin-top: 8px;
-  height: 100vh;
+  height: 100%;
   position: relative;
   flex: 1;
 `

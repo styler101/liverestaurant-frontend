@@ -1,15 +1,16 @@
 import React from 'react'
 import HighchartsReact from 'highcharts-react-official'
 import Highcharts from 'highcharts'
-import { Segment } from 'semantic-ui-react'
+import * as S from './styles'
 import { GraphicProps } from '../interface'
 
 export function Area(props: GraphicProps) {
   const { header, options } = props
+  console.log(options)
   return (
-    <Segment>
+    <S.Container>
       {header}
-      <HighchartsReact Highcharts={Highcharts} options={options} />
-    </Segment>
+      <HighchartsReact highcharts={Highcharts} options={options} />
+    </S.Container>
   )
 }

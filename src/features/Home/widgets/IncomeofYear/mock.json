@@ -1,6 +1,7 @@
 {
   "chart": {
-    "type": "area"
+    "type": "area",
+    "height": "280px"
   },
   "title": {
     "text": null
