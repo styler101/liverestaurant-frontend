@@ -11,7 +11,7 @@ export function DailyPerformance() {
     <SpeedGauge
       header={
         <S.Header>
-          <strong> Performace Diária </strong>
+          <strong> Performance Diária </strong>
           <AiOutlineExpandAlt size={20} color="#ccc" />
         </S.Header>
       }

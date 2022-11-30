@@ -2,7 +2,7 @@ export default {
   chart: {
     type: 'solidgauge',
     backgroundColor: null,
-    height: '300px',
+    height: '280px',
   },
 
   title: null,
@@ -23,7 +23,7 @@ export default {
     enabled: false,
   },
 
-  colors: ['#04e762'],
+  colors: ['#06d6a0'],
 
   exporting: {
     enabled: false,

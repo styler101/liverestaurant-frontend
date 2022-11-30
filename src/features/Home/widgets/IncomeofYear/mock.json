@@ -1,0 +1,45 @@
+{
+  "chart": {
+    "type": "area"
+  },
+  "title": {
+    "text": null
+  },
+  "subtitle": {
+    "text": null
+  },
+  "xAxis": {
+    "categories": [
+      "Jan",
+      "Fev",
+      "Mar",
+      "Abr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Set",
+      "Out",
+      "Nov",
+      "Dev"
+    ]
+  },
+  "yAxis": {
+    "title": {
+      "text": null
+    }
+  },
+  "credits": {
+    "enabled": false
+  },
+  "series": [
+    {
+      "name": "Ganho Anual",
+      "data": [37.8, 29.3, 30.8, 36.8, 40.5, 35.3, 34.9, 43.6, 45.7, 35.9, 32.7]
+    },
+    {
+      "name": "Gasto Anual",
+      "data": [39.9, 29.9, 26.7, 38.1, 39.3, 30.2, 27.5, 36.7, 42.7, 31.4, 27.5]
+    }
+  ]
+}

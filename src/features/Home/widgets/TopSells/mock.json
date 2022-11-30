@@ -4,7 +4,7 @@
     "plotBorderWidth": null,
     "plotShadow": false,
     "type": "pie",
-    "height": "300px"
+    "height": "280px"
   },
   "title": {
     "text": null

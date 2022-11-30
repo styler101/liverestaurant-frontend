@@ -1,7 +1,8 @@
 {
   "chart": {
     "type": "variablepie",
-    "backgroundColor": null
+    "backgroundColor": null,
+    "height": "280px"
   },
   "credits": {
     "enabled": false
@@ -12,28 +13,41 @@
   "tooltip": {
     "headerFormat": ""
   },
+  "plotOptions": {
+    "variablepie": {
+      "allowPointSelect": true,
+      "cursor": "pointer",
+      "dataLabels": {
+        "enabled": false
+      }
+    }
+  },
   "colors": ["#0466c8", "#06d6a0", "#ff477e"],
   "series": [
     {
-      "minPointSize": 10,
-      "innerSize": "50%",
+      "showInLegend": true,
+      "minPointSize": 0,
+      "innerSize": "55%",
       "zMin": 0,
       "name": "Vendas",
       "data": [
         {
           "name": "Delivery",
           "y": 30,
-          "z": 92
+          "z": 92,
+          "selected": true
         },
         {
           "name": "Local",
           "y": 80,
-          "z": 119
+          "z": 119,
+          "selected": true
         },
         {
           "name": "Ifood",
           "y": 100,
-          "z": 121
+          "z": 121,
+          "selected": true
         }
       ]
     }

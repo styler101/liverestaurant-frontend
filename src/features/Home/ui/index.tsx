@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Card, CardGroup } from 'semantic-ui-react'
+import { Grid, GridColumn } from 'semantic-ui-react'
 import { Header } from '@/components/Header'
 import { Toolbar } from '../components/Toolbar'
 import {
@@ -8,6 +8,7 @@ import {
   WeeekendIncome,
   DeliveryTypes,
   TotalAmmount,
+  IncomeOfYear,
 } from '../widgets'
 
 import * as S from './styles'
@@ -41,20 +42,29 @@ export function Ui() {
               <DeliveryTypes />
             </Grid.Column>
             <Grid.Column stretched>
-              <CardGroup itemsPerRow={2}>
-                <Card>
+              <S.CardGroup itemsPerRow={1}>
+                <S.Card>
                   <TotalAmmount />
-                </Card>
-                <Card>
+                </S.Card>
+                <S.Card>
                   <TotalAmmount />
-                </Card>
-                <Card>
+                </S.Card>
+              </S.CardGroup>
+            </Grid.Column>
+            <GridColumn stretched>
+              <S.CardGroup itemsPerRow={1}>
+                <S.Card>
                   <TotalAmmount />
-                </Card>
-                <Card>
+                </S.Card>
+                <S.Card>
                   <TotalAmmount />
-                </Card>
-              </CardGroup>
+                </S.Card>
+              </S.CardGroup>
+            </GridColumn>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column>
+              <IncomeOfYear />
             </Grid.Column>
           </Grid.Row>
         </Grid>
