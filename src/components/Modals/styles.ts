@@ -20,4 +20,19 @@ export const Content = styled.div`
   max-width: 1200px;
   background: #fff;
   padding: 16px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  header {
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .ui.segment {
+    border: 0 !important;
+    box-shadow: none;
+  }
 `
