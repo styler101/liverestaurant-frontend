@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid, GridColumn } from 'semantic-ui-react'
 import { Header } from '@/components/Header'
 import { Toolbar } from '../components/Toolbar'
+
 import {
   DailyPerformance,
   TopSells,
@@ -12,8 +13,10 @@ import {
 } from '../widgets'
 
 import * as S from './styles'
+import { useMain } from '@/features/Main/context'
 
 export function Ui() {
+  const { openDashboardModal } = useMain()
   return (
     <S.Container>
       <Header
@@ -69,6 +72,7 @@ export function Ui() {
           </Grid.Row>
         </Grid>
       </S.CardsArea>
+      {openDashboardModal}
     </S.Container>
   )
 }
