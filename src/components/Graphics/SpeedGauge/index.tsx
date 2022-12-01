@@ -1,14 +1,15 @@
 import React from 'react'
-import { Segment } from 'semantic-ui-react'
-import HighchartsModules from 'highcharts/highcharts-more'
-import solidgauge from 'highcharts/modules/solid-gauge'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
+import HighchartsModules from 'highcharts/highcharts-more'
+import Solidgauge from 'highcharts/modules/solid-gauge'
+import { Segment } from 'semantic-ui-react'
+import { GraphicProps } from '../interface'
 import * as Styles from './styles'
 
-import { GraphicProps } from '../interface'
 HighchartsModules(Highcharts)
-solidgauge(Highcharts)
+Solidgauge(Highcharts)
+
 export function SpeedGauge(props: GraphicProps) {
   const { header, options, children } = props
   return (

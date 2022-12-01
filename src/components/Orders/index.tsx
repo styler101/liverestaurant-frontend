@@ -6,15 +6,15 @@ import checkedIcon from '@/assets/images/svg/checked.svg'
 import { orders } from '@/mocks/Orders/order'
 import * as S from './styles'
 
-export function Orders () {
+export function Orders() {
   return (
     <S.Container>
-       <OrdersBoard
-         icon={timerIcon}
-         title="Fila de espera"
-         // @ts-expect-error
-         orders={orders}
-       />
+      <OrdersBoard
+        icon={timerIcon}
+        title="Fila de espera"
+        // @ts-expect-error
+        orders={orders}
+      />
       <OrdersBoard
         icon={cookIcon}
         title="Em Produção"

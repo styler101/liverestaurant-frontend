@@ -1,7 +1,7 @@
 import React from 'react'
 import { FiX } from 'react-icons/fi'
-import { ModalProps } from './interfaces'
 import { useMain } from '@/features/Main/context'
+import { ModalProps } from './interfaces'
 import * as S from './styles'
 
 export function Modal(props: ModalProps) {

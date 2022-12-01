@@ -1,6 +1,6 @@
 import React from 'react'
-import { Header } from '@/components/Header'
 import { Composition } from '@/components/Records/components'
+import { Header } from '@/components/Header'
 
 import * as S from './styles'
 

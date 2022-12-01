@@ -1,6 +1,6 @@
 import React from 'react'
-import { IoCardOutline } from 'react-icons/io5'
 import { SimpleCard } from '@/components/Graphics/SimpleCard'
+import { IoCardOutline } from 'react-icons/io5'
 import * as S from './styles'
 
 export function TotalAmmount() {

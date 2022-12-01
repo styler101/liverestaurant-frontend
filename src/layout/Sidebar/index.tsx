@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
+import * as Io from 'react-icons/io'
+import * as Fa from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 import { Context } from '@/features/Main/context'
-import * as Io from 'react-icons/io'
 // import * as Fi from 'react-icons/fi'
-import * as Fa from 'react-icons/fa'
 
 import * as S from './styles'
 import useOnClickOutSide from '@/hooks/useClickoutSide'

@@ -1,8 +1,8 @@
 import React from 'react'
+import { AiOutlineExpandAlt } from 'react-icons/ai'
 import { Pie } from '@/components/Graphics/Pie'
 import mock from './mock.json'
 import * as S from '../styled'
-import { AiOutlineExpandAlt } from 'react-icons/ai'
 
 export function TopSells() {
   return (

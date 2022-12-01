@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
+import * as Fi from 'react-icons/fi'
 import { Context } from '@/features/Main/context'
 import logo from '@/assets/images/svg/ilustra.svg'
-import * as Fi from 'react-icons/fi'
 import * as S from './styles'
 
 export function Header() {

@@ -1,8 +1,8 @@
 import React from 'react'
 import { AiOutlineExpandAlt } from 'react-icons/ai'
-import * as S from '../styled'
 import { Columns } from '@/components/Graphics'
 import mock from './mock.json'
+import * as S from '../styled'
 
 export function WeeekendIncome() {
   return (

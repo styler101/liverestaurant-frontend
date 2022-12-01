@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid, GridColumn } from 'semantic-ui-react'
+import { useMain } from '@/features/Main/context'
 import { Header } from '@/components/Header'
 import { Toolbar } from '../components/Toolbar'
 
@@ -13,7 +14,6 @@ import {
 } from '../widgets'
 
 import * as S from './styles'
-import { useMain } from '@/features/Main/context'
 
 export function Ui() {
   const { openDashboardModal } = useMain()

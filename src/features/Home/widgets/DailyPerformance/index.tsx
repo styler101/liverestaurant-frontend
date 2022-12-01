@@ -1,13 +1,13 @@
 import React from 'react'
-
-import { Modal } from '@/components/Modals'
-import { CreatePortal } from '@/hooks/CreatePortal'
+import { AiOutlineExpandAlt } from 'react-icons/ai'
 import { SpeedGauge } from '@/components/Graphics/SpeedGauge'
+import { CreatePortal } from '@/hooks/CreatePortal'
+import { useMain } from '@/features/Main/context'
+import { Modal } from '@/components/Modals'
 import mock from './mock'
+
 import * as S from '../styled'
 import * as Styles from './styles'
-import { AiOutlineExpandAlt } from 'react-icons/ai'
-import { useMain } from '@/features/Main/context'
 
 export function DailyPerformance() {
   const { handleOpenDashboardModal } = useMain()

@@ -1,8 +1,8 @@
 import React from 'react'
 import HighchartsReact from 'highcharts-react-official'
 import Highcharts from 'highcharts'
-import * as S from './styles'
 import { GraphicProps } from '../interface'
+import * as S from './styles'
 
 export function Area(props: GraphicProps) {
   const { header, options } = props

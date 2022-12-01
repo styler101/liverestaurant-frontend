@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react'
 import * as Fi from 'react-icons/fi'
 import * as Gr from 'react-icons/gr'
-
-import timer from '@/assets/images/svg/timer.svg'
-import checked from '@/assets/images/svg/checked.svg'
 import { formatCurrency } from '@/utils/Formaters/formatCurrency'
+import checked from '@/assets/images/svg/checked.svg'
+import timer from '@/assets/images/svg/timer.svg'
 import { OrderModalProps } from './interfaces'
 
 import * as S from './styles'

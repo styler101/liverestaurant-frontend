@@ -1,8 +1,8 @@
 import React from 'react'
 import { AiOutlineExpandAlt } from 'react-icons/ai'
 import { RadiusPie } from '@/components/Graphics/RadiusPie'
-import * as S from '../styled'
 import mock from './mock.json'
+import * as S from '../styled'
 
 export function DeliveryTypes() {
   return (

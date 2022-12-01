@@ -1,7 +1,7 @@
 import React from 'react'
 import { Area } from '@/components/Graphics/Area'
-import * as S from '../styled'
 import mock from './mock.json'
+import * as S from '../styled'
 
 export function IncomeOfYear() {
   return (
