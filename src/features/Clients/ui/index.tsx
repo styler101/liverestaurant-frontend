@@ -1,6 +1,7 @@
 import React from 'react'
-import { Composition } from '@/components/Records/components'
+
 import { Header } from '@/components/Header'
+import { Manager } from './components/Manager'
 
 import * as S from './styles'
 
@@ -11,7 +12,7 @@ export function Ui() {
         title="Clientes"
         description="Utilize os recursos para gerenciar os seus clientes."
       />
-      <Composition />
+      <Manager />
     </S.Container>
   )
 }

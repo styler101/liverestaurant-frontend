@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { OrderModal } from '@/components/OrderModal'
-import { Order } from '@/types/Order'
+import { Index } from '@/types/Order'
 import { OrdersBoardProps } from './interfaces'
 
 import * as S from './styles'
@@ -10,7 +10,7 @@ export function OrdersBoard (props: OrdersBoardProps) {
   const { title, icon, orders } = props
   const [openedModal, setOpenedModal] = React.useState<JSX.Element | null>(null)
 
-  function handleOpenOrder (order: Order) {
+  function handleOpenOrder (order: Index) {
     setOpenedModal(<OrderModal
         data={ { ...order }}
         closeModal={setOpenedModal}/>)

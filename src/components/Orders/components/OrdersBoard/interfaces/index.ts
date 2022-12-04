@@ -1,8 +1,8 @@
-import { Order } from '@/types/Order'
+import { Index } from '@/types/Order'
 export interface OrdersBoardProps {
   title: string
   icon: string
-  orders: Order[]
+  orders: Index[]
 }
 
 export interface Product {

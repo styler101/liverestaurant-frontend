@@ -1,5 +1,5 @@
 
-export interface Order {
+export interface Index {
   _id: string
   table: string
   status: 'WAITING' | 'IN_PRODUCTION' | 'DONE'

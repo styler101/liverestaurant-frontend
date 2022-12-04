@@ -1,7 +1,7 @@
 import React, { SetStateAction } from 'react'
-import { Order } from '@/types/Order'
+import { Index } from '@/types/Order'
 
 export interface OrderModalProps {
-  data: Order
+  data: Index
   closeModal: React.Dispatch<SetStateAction<JSX.Element | null>>
 }
