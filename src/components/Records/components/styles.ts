@@ -12,11 +12,13 @@ export const Container = styled(Segment)`
   padding: 0 !important;
   margin: 0 !important;
   height: 100%;
+  box-shadow: none !important;
+  border: 1px solid rgba(34,36,38,.15) ;
   .ui.table {
+    width:100%;
     overflow-y: auto;
-    width: 100%;
     border-right: 0;
-    border-left: 0;
+    border-left: 1px solid rgba(34,36,38,.15)  !important;
     border-bottom:0;
   }
 
@@ -37,4 +39,37 @@ export const Container = styled(Segment)`
     border-width: 0.2em;
     box-shadow: 0 0 0 1px transparent;
   }
+`
+
+
+export const Toolbar = styled.div`
+ height: 46px;
+ width:100%;
+
+  .ui.table {
+    width:100%;
+    overflow-y: auto;
+    border:0;
+    display:flex;
+    align-items:center;
+    height:46px;
+
+    td{
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      height:100%;
+      & + td{
+        border-right: 1px solid #ccc;
+      }
+
+    }
+
+    td:first-child{
+      border-right: 1px solid #ccc;
+    }
+
+
+  }
+
 `

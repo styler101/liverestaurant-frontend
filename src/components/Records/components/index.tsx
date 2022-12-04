@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Table, Button, Loader } from 'semantic-ui-react'
+import { Table, Button, Loader, Icon } from 'semantic-ui-react'
 import { ColumnProps } from '@/types/Records'
 import * as S from './styles'
 
@@ -14,7 +14,21 @@ export function Records(props: RecodersProps) {
     <S.Wrapper>
 
       <S.Container raised>
-        <Button> Teste</Button>
+        <S.Toolbar>
+          <Table className="records-re">
+             <Table.Cell width={4}>
+               <Button> Teste </Button>
+               <Icon name={'ellipsis vertical'}/>
+             </Table.Cell>
+
+            <Table.Cell width={12}>
+              <input placeholder={'Pesquisar'}/>
+              <span> Filtros Aplicados</span>
+              <span>Filtros</span>
+            </Table.Cell>
+          </Table>
+
+        </S.Toolbar>
         <Table singleLine className="records-re" stackable attached={true}>
           <Table.Header className="records-header">
             <Table.Row>
