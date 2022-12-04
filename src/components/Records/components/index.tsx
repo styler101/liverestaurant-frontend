@@ -1,14 +1,15 @@
 
 import React from 'react'
-import { Table, Button } from 'semantic-ui-react'
-import {ColumnProps} from '@/types/Records'
+import { Table, Button, Loader } from 'semantic-ui-react'
+import { ColumnProps } from '@/types/Records'
 import * as S from './styles'
 
 interface RecodersProps{
-  header: ColumnProps[]
+  header: ColumnProps[],
+  loading: boolean
 }
 export function Records(props: RecodersProps) {
-  const { header } = props
+  const { header, loading } = props
   return (
     <S.Wrapper>
 
@@ -22,13 +23,15 @@ export function Records(props: RecodersProps) {
               ))}
             </Table.Row>
           </Table.Header>
-          <Table.Body>
-            <Table.Row
-              className="records-row"
-              style={{ height: 32, padding: 0, margin: 0 }}>
-              {header.map((item) => <Table.Cell key={item.key}> {item.content}</Table.Cell>)}
-            </Table.Row>
-          </Table.Body>
+          {loading ? <Loader active/> : (
+            <Table.Body>
+              <Table.Row
+                className="records-row"
+                style={{ height: 32, padding: 0, margin: 0 }}>
+                {header.map((item) => <Table.Cell key={item.key}> {item.content}</Table.Cell>)}
+              </Table.Row>
+            </Table.Body>
+          )}
         </Table>
       </S.Container>
     </S.Wrapper>
