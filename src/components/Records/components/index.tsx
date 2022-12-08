@@ -1,14 +1,10 @@
 import React from 'react'
-import { Table, Button, Loader, Icon, Tab } from 'semantic-ui-react'
-import { ColumnProps } from '@/types/Records'
+import { Table, Button, Loader, Icon } from 'semantic-ui-react'
+import { TableHeader } from './TableHeader'
+import { Rows } from './Rows'
+import { RecodersProps } from './interfaces'
 import * as S from './styles'
-import { matchRoutes } from 'react-router-dom'
 
-interface RecodersProps {
-  header: ColumnProps[]
-  loading: boolean
-  rows: any[]
-}
 export function Records(props: RecodersProps) {
   const { header, loading, rows } = props
   const parserRowsToObject = Object.assign({}, rows)
@@ -29,49 +25,26 @@ export function Records(props: RecodersProps) {
     <S.Wrapper>
       <S.Container raised>
         <S.Toolbar>
-          <Table className="records-re">
-            <Table.Cell width={4}>
+          <div>
+            <div>
               <Button> Teste </Button>
               <Icon name={'ellipsis vertical'} />
-            </Table.Cell>
+            </div>
 
-            <Table.Cell width={12}>
+            <div>
               <input placeholder={'Pesquisar'} />
               <span> Filtros Aplicados</span>
               <span>Filtros</span>
-            </Table.Cell>
-          </Table>
+            </div>
+          </div>
         </S.Toolbar>
         <Table singleLine className="records-re" stackable attached={true}>
-          <Table.Header className="records-header">
-            <Table.Row>
-              {header.map((item, index) => (
-                <React.Fragment key={index}>
-                  <Table.HeaderCell key={item.key}>
-                    {' '}
-                    {item.content}{' '}
-                  </Table.HeaderCell>
-                </React.Fragment>
-              ))}
-            </Table.Row>
-          </Table.Header>
+          <TableHeader columns={header} />
           {loading ? (
             <Loader active />
           ) : (
             <Table.Body>
-              <Table.Row>
-                {Object.entries(parserRowsToObject).map(
-                  ([arrayKey, arrayValue]) => {
-                    const objectValue = Object.values(arrayValue)
-                    // @t-ignore
-                    return (
-                      <Table.Cell key={Math.random()}>
-                        <span> {objectValue}</span>
-                      </Table.Cell>
-                    )
-                  }
-                )}
-              </Table.Row>
+              <Rows rows={rows} />
             </Table.Body>
           )}
         </Table>

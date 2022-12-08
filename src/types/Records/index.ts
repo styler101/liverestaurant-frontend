@@ -6,5 +6,13 @@ export interface ColumnProps {
   sortKey: string
   width: SemanticWIDTHSNUMBER
 
-  textAlign: SemanticTEXTALIGNMENTS
+  textAlign: 'left' | 'center' | 'right'
+}
+
+export interface RowsProps {
+  rows: any[]
+}
+
+export interface RowProps {
+  row: any
 }
