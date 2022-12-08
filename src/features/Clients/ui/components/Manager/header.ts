@@ -3,31 +3,31 @@ import { ColumnProps } from '@/types/Records'
 const header: ColumnProps[] = [
   {
     content: 'Status',
-    key: 'status_jsx',
+    key: 'status',
     sortKey: 'status',
     width: 2,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   {
     content: 'Nome',
     key: 'name',
     sortKey: 'name',
     width: 2,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   {
     content: 'Email',
     key: 'email',
     sortKey: 'email',
     width: 2,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   {
     content: 'Telefone',
     key: 'phone',
     sortKey: 'phone',
     width: 2,
-    textAlign: 'center'
+    textAlign: 'center',
   },
 
   {
@@ -35,7 +35,7 @@ const header: ColumnProps[] = [
     key: 'city',
     sortKey: 'city',
     width: 2,
-    textAlign: 'center'
+    textAlign: 'center',
   },
 
   {
@@ -43,7 +43,7 @@ const header: ColumnProps[] = [
     key: 'state',
     sortKey: 'state',
     width: 2,
-    textAlign: 'center'
+    textAlign: 'center',
   },
 
   {
@@ -51,7 +51,7 @@ const header: ColumnProps[] = [
     key: 'address',
     sortKey: 'address',
     width: 2,
-    textAlign: 'center'
+    textAlign: 'center',
   },
 
   {
@@ -59,9 +59,8 @@ const header: ColumnProps[] = [
     key: 'zipcode',
     sortKey: 'zipcode',
     width: 2,
-    textAlign: 'center'
-  }
-
+    textAlign: 'center',
+  },
 ]
 
 export default header

@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "status": true,
+      "name": "Lucas Santos",
+      "email": "lucas@gmail.com",
+      "phone": "35151515151",
+      "city": "Belo Horizonte",
+      "state": "Minas Gerais",
+      "zipcode": "31415151-51"
+    },
+    {
+      "status": true,
+      "name": "Lucas Santos",
+      "email": "lucas@gmail.com",
+      "phone": "35151515151",
+      "city": "Belo Horizonte",
+      "state": "Minas Gerais",
+      "zipcode": "31415151-51"
+    },
+    {
+      "status": true,
+      "name": "Lucas Santos",
+      "email": "lucas@gmail.com",
+      "phone": "35151515151",
+      "city": "Belo Horizonte",
+      "state": "Minas Gerais",
+      "zipcode": "31415151-51"
+    }
+  ]
+}
