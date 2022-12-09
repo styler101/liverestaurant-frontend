@@ -1,8 +1,15 @@
 import React from 'react'
-import header from './header'
-import mock from './mock.json'
 import { Records } from '@/components/Records/components'
+import header from './header'
+import mock from './repositories/mock.json'
+import dataMapper from './mappers/parser'
 
 export function Manager() {
-  return <Records header={header} loading={false} rows={mock.data} />
+  return (
+    <Records
+      header={header}
+      loading={false}
+      rows={dataMapper.toDomain(mock.data)}
+    />
+  )
 }

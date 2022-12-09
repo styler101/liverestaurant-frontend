@@ -3,7 +3,7 @@ import { ColumnProps } from '@/types/Records'
 const header: ColumnProps[] = [
   {
     content: 'Status',
-    key: 'status',
+    key: 'status_jsx',
     sortKey: 'status',
     width: 2,
     textAlign: 'center',

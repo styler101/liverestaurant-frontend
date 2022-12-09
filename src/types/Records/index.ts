@@ -11,8 +11,10 @@ export interface ColumnProps {
 
 export interface RowsProps {
   rows: any[]
+  columns: ColumnProps[]
 }
 
 export interface RowProps {
   row: any
+  fields: String[]
 }

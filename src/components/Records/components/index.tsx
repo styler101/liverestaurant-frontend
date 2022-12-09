@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Table, Button, Loader, Icon } from 'semantic-ui-react'
 import { TableHeader } from './TableHeader'
 import { Rows } from './Rows'
@@ -7,7 +8,7 @@ import * as S from './styles'
 
 export function Records(props: RecodersProps) {
   const { header, loading, rows } = props
-  const parserRowsToObject = Object.assign({}, rows)
+
   /*
   Object.entries(parserRowsToObject).map(([arrayKey, arrayValue]) => {
     const objectValue = Object.values(arrayValue)
@@ -44,7 +45,7 @@ export function Records(props: RecodersProps) {
             <Loader active />
           ) : (
             <Table.Body>
-              <Rows rows={rows} />
+              <Rows rows={rows} columns={header} />
             </Table.Body>
           )}
         </Table>
