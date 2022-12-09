@@ -4,7 +4,7 @@ import HighchartsReact from 'highcharts-react-official'
 import HighchartsModules from 'highcharts/highcharts-more'
 import VariablePie from 'highcharts/modules/variable-pie'
 import { Segment } from 'semantic-ui-react'
-import { GraphicProps } from '../interface'
+import { GraphicProps } from '../interfaces'
 
 HighchartsModules(Highcharts)
 VariablePie(Highcharts)

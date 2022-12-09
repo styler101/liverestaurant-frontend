@@ -3,7 +3,7 @@ import React from 'react'
 import { Table, Button, Loader, Icon } from 'semantic-ui-react'
 import { TableHeader } from './TableHeader'
 import { Rows } from './Rows'
-import { RecodersProps } from './interfaces'
+import { RecodersProps } from '@/types/Records'
 import * as S from './styles'
 
 export function Records(props: RecodersProps) {

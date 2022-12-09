@@ -4,7 +4,7 @@ import HighchartsReact from 'highcharts-react-official'
 import HighchartsModules from 'highcharts/highcharts-more'
 import Solidgauge from 'highcharts/modules/solid-gauge'
 import { Segment } from 'semantic-ui-react'
-import { GraphicProps } from '../interface'
+import { GraphicProps } from '../interfaces'
 import * as Styles from './styles'
 
 HighchartsModules(Highcharts)

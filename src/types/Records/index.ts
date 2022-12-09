@@ -1,5 +1,11 @@
 import { SemanticWIDTHSNUMBER, SemanticTEXTALIGNMENTS } from 'semantic-ui-react'
 
+export interface RecodersProps {
+  header: ColumnProps[]
+  loading: boolean
+  rows: any[]
+}
+
 export interface ColumnProps {
   content: string
   key: string

@@ -2,7 +2,7 @@ import React from 'react'
 import { Segment } from 'semantic-ui-react'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
-import { GraphicProps } from '../interface'
+import { GraphicProps } from '../interfaces'
 
 export function Pie(props: GraphicProps) {
   const { header, options } = props
