@@ -1,6 +1,7 @@
 import React from 'react'
 import { Bullet } from '@/components/Bullet'
 import { DataInterface, BodyInterface } from '../interfaces'
+import { notEmptyStringOrDefault } from '@/utils/Validators'
 
 class DataMapper {
   toDomain(data: DataInterface[]): BodyInterface[] {
@@ -13,13 +14,13 @@ class DataMapper {
             content={item.status === 0 ? 'Inativo' : 'Ativo'}
           />
         ),
-        name: item.name,
-        email: item.email,
-        phone: item.phone,
-        city: item.city,
-        state: item.state,
-        address: item.address,
-        zipcode: item.zipcode,
+        name: notEmptyStringOrDefault(item.name),
+        email: notEmptyStringOrDefault(item.email),
+        phone: notEmptyStringOrDefault(item.phone),
+        city: notEmptyStringOrDefault(item.city),
+        state: notEmptyStringOrDefault(item.state),
+        address: notEmptyStringOrDefault(item.address),
+        zipcode: notEmptyStringOrDefault(item.zipcode),
       }
 
       return parsedItem
