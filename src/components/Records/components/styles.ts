@@ -3,7 +3,6 @@ import { Segment } from 'semantic-ui-react'
 
 export const Wrapper = styled.div`
   height: calc(100% - 10vh);
-  margin-top: 32px !important;
   display: flex;
   flex-direction: column;
 `
@@ -13,24 +12,27 @@ export const Container = styled(Segment)`
   margin: 0 !important;
   height: 100%;
   box-shadow: none !important;
-  border: 1px solid rgba(34,36,38,.15) ;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-top: 0;
+  border-bottom: 0;
   .ui.table {
-    width:100%;
+    width: 100%;
     overflow-y: auto;
     border-right: 0;
-    border-left: 1px solid rgba(34,36,38,.15)  !important;
-    border-bottom:0;
+    border-left: 1px solid rgba(34, 36, 38, 0.15) !important;
+    border-bottom: 0;
+    border-top: 0;
   }
 
-  .ui.loader:after{
+  .ui.loader:after {
     position: absolute;
     content: '';
     top: 0;
     left: 50%;
     width: 100%;
     height: 100%;
-    -webkit-animation: loader .6s linear;
-    animation: loader .6s linear;
+    -webkit-animation: loader 0.6s linear;
+    animation: loader 0.6s linear;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     border-radius: 500rem;
@@ -41,35 +43,33 @@ export const Container = styled(Segment)`
   }
 `
 
-
 export const Toolbar = styled.div`
- height: 46px;
- width:100%;
+  height: 46px;
+  width: 100%;
+  display: flex;
+  background: red;
+  align-items: center;
 
   .ui.table {
-    width:100%;
+    width: 100%;
     overflow-y: auto;
-    border:0;
-    display:flex;
-    align-items:center;
-    height:46px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    height: 46px;
 
-    td{
-      display:flex;
-      align-items:center;
+    td {
+      display: flex;
+      align-items: center;
       justify-content: center;
-      height:100%;
-      & + td{
+      height: 100%;
+      & + td {
         border-right: 1px solid #ccc;
       }
-
     }
 
-    td:first-child{
+    td:first-child {
       border-right: 1px solid #ccc;
     }
-
-
   }
-
 `

@@ -1,6 +1,5 @@
 import React from 'react'
-
-import { Table, Button, Loader, Icon } from 'semantic-ui-react'
+import { Table, Loader } from 'semantic-ui-react'
 import { TableHeader } from './TableHeader'
 import { Rows } from './Rows'
 import { RecodersProps } from '@/types/Records'
@@ -12,20 +11,6 @@ export function Records(props: RecodersProps) {
   return (
     <S.Wrapper>
       <S.Container raised>
-        <S.Toolbar>
-          <div>
-            <div>
-              <Button> Teste </Button>
-              <Icon name={'ellipsis vertical'} />
-            </div>
-
-            <div>
-              <input placeholder={'Pesquisar'} />
-              <span> Filtros Aplicados</span>
-              <span>Filtros</span>
-            </div>
-          </div>
-        </S.Toolbar>
         <Table singleLine className="records-re" stackable attached={true}>
           <TableHeader columns={header} />
           {loading ? (
