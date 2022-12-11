@@ -6,6 +6,12 @@ import * as S from './styles'
 export function Search(props: InputSearchProps): JSX.Element {
   // @ts-expect-error
   const { search, setSearch } = props?.search
+  const [showClear, setShowClear] = React.useState<boolean>(false)
+
+  const resetData = () => {
+    setShowClear(false)
+    setSearch('')
+  }
   return (
     <S.Container>
       <input
@@ -13,8 +19,17 @@ export function Search(props: InputSearchProps): JSX.Element {
         placeholder="Pesquise"
         value={search}
         onChange={(event) => setSearch(event.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            setShowClear(true)
+          }
+        }}
       />
-      <Fi.FiSearch size={20} color="#ccc" />
+      {showClear ? (
+        <Fi.FiX size={20} color="#ccc" onClick={resetData} />
+      ) : (
+        <Fi.FiSearch size={20} color="#ccc" />
+      )}
     </S.Container>
   )
 }

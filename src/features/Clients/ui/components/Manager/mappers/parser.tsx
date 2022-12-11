@@ -22,7 +22,6 @@ class DataMapper {
         address: notEmptyStringOrDefault(item.address),
         zipcode: notEmptyStringOrDefault(item.zipcode),
       }
-
       return parsedItem
     })
   }

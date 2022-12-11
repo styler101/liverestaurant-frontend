@@ -3,6 +3,8 @@ import { AiOutlineReload } from 'react-icons/ai'
 import { Popup } from 'semantic-ui-react'
 import { Dropdown } from './components/Dropdown'
 import { Search } from './components/Search'
+import { Filters } from './components/Filters'
+import { AppliedFilters } from './components/AppliedFilters'
 import { ToolbarProps } from './interfaces'
 import * as S from './styles'
 
@@ -40,6 +42,8 @@ export function Toolbar(props: ToolbarProps): JSX.Element {
               }}
             />
           )}
+          <AppliedFilters />
+          <Filters />
         </S.RightOptions>
       </S.Container>
     </React.Fragment>

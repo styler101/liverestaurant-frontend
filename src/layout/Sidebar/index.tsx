@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import * as Io from 'react-icons/io'
 import * as Fa from 'react-icons/fa'
+import * as Ai from 'react-icons/ai'
+
 import { useNavigate } from 'react-router-dom'
 import { Context } from '@/features/Main/context'
 // import * as Fi from 'react-icons/fi'
@@ -54,6 +56,12 @@ export function Sidebar() {
         <Fa.FaFacebookMessenger size={23} color="#fff" />
         <div>
           <span> Chat </span>
+        </div>
+      </S.Item>
+      <S.Item menuActive={menuActive} onClick={() => navigate('/chat')}>
+        <Ai.AiFillSetting size={23} color="#fff" />
+        <div>
+          <span> Configurações </span>
         </div>
       </S.Item>
     </S.Container>
