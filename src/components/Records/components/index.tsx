@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Table, Loader } from 'semantic-ui-react'
 import { TableHeader } from './TableHeader'
 import { Rows } from './Rows'

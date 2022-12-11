@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { SetStateAction } from 'react'
 
 interface RuleProps {
   message?: string
@@ -14,4 +14,8 @@ export interface DropDownProps {
 export interface ToolbarProps {
   children: React.ReactNode
   dropdown: DropDownProps[]
+  search?: {
+    search: string
+    setSearch: React.Dispatch<SetStateAction<string>>
+  }
 }

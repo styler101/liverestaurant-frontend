@@ -10,6 +10,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   border-bottom: 0;
+  justify-content: space-between;
 `
 
 export const ChildrenItem = styled.div`
@@ -42,4 +43,14 @@ export const ChildrenItem = styled.div`
   }
 `
 
-export const DropDownItem = styled.div``
+export const LeftOptions = styled.div`
+  display: flex;
+  align-items: center;
+  flex: 1;
+`
+
+export const RightOptions = styled.div`
+  display: flex;
+  align-items: center;
+  flex: 1;
+`

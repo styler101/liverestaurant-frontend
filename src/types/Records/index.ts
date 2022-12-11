@@ -1,3 +1,4 @@
+import React, { SetStateAction } from 'react'
 import { SemanticWIDTHSNUMBER, SemanticTEXTALIGNMENTS } from 'semantic-ui-react'
 
 export interface RecodersProps {
