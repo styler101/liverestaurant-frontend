@@ -1,13 +1,14 @@
 import React from 'react'
+import { AiOutlineReload } from 'react-icons/ai'
+import { Popup } from 'semantic-ui-react'
 import { Dropdown } from './components/Dropdown'
 import { Search } from './components/Search'
 import { ToolbarProps } from './interfaces'
 import * as S from './styles'
 
 export function Toolbar(props: ToolbarProps): JSX.Element {
-  const { children, dropdown, search } = props
+  const { children, dropdown, search, reloader } = props
 
-  console.log(typeof search)
   return (
     <React.Fragment>
       <S.Container>
@@ -18,6 +19,19 @@ export function Toolbar(props: ToolbarProps): JSX.Element {
           )}
         </S.LeftOptions>
         <S.RightOptions>
+          {reloader && (
+            <Popup
+              position="bottom center"
+              trigger={
+                <S.Reloader onClick={reloader}>
+                  <AiOutlineReload color="#ccc" size="20" />
+                </S.Reloader>
+              }
+              content={<strong>Atualizar</strong>}
+              inverted
+              on="hover"
+            />
+          )}
           {search && (
             <Search
               search={{

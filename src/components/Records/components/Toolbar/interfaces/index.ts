@@ -13,9 +13,10 @@ export interface DropDownProps {
 
 export interface ToolbarProps {
   children: React.ReactNode
-  dropdown: DropDownProps[]
+  dropdown?: DropDownProps[]
   search?: {
     search: string
     setSearch: React.Dispatch<SetStateAction<string>>
   }
+  reloader?: () => Promise<any>
 }

@@ -54,3 +54,20 @@ export const RightOptions = styled.div`
   align-items: center;
   flex: 1;
 `
+
+export const Reloader = styled.button`
+  width: 50px;
+  height: 100%;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 0;
+  border-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  svg {
+    transform: rotate(25deg);
+    cursor: pointer;
+  }
+`
