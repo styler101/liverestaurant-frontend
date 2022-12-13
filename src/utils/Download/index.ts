@@ -1,10 +1,10 @@
 export function download(url: string) {
-  let filePath = url.replace('\\/', '/')
-
+  let baseUrl = `http://localhost:3001`
+  let filePath = baseUrl.concat(url.replace('\\/', '/'))
   let element = document.createElement('a')
   element.href = filePath
   // @ts-expect-error
-  element.innerHTML = element.download = filePath.split('/').pop()
+  element.setAttribute('download', filePath.split('/').pop())
 
   document.body.appendChild(element)
   element.click()

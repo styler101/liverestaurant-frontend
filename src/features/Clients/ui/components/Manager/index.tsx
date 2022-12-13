@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { toast } from 'react-toastify'
 import { Button } from 'semantic-ui-react'
+import { download } from '@/utils/Download'
 import { Records } from '@/components/Records/components'
 import { Toolbar } from '@/components/Records/components/Toolbar'
 import { getAllClients } from '../../services/index'
-import { download } from '@/utils/Download'
+
 import { BodyInterface, DataInterface } from './interfaces'
 import header from './header'
 
