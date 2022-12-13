@@ -1,22 +1,25 @@
 export interface DataInterface {
   status: number
   name: string
+  lastName: string
   email: string
   phone: string
-  city: string
-  state: string
+  gender: string
+  avatar: string
+  brithDate: string
   address: string
-  zipcode: string
+  zipCode: string
+  city: string
+  uf: string
 }
 
 export interface BodyInterface {
   status: number
   status_jsx: JSX.Element | null
-  name: string
+  name_jsx: string
   email: string
   phone: string
   city: string
   state: string
-  address: string
   zipcode: string
 }

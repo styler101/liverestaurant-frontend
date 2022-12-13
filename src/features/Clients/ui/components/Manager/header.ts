@@ -10,7 +10,7 @@ const header: ColumnProps[] = [
   },
   {
     content: 'Nome',
-    key: 'name',
+    key: 'name_jsx',
     sortKey: 'name',
     width: 2,
     textAlign: 'center',
@@ -42,14 +42,6 @@ const header: ColumnProps[] = [
     content: 'Estado',
     key: 'state',
     sortKey: 'state',
-    width: 2,
-    textAlign: 'center',
-  },
-
-  {
-    content: 'Endereço',
-    key: 'address',
-    sortKey: 'address',
     width: 2,
     textAlign: 'center',
   },

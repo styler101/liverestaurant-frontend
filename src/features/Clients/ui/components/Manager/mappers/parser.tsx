@@ -14,13 +14,12 @@ class DataMapper {
             content={item.status === 0 ? 'Inativo' : 'Ativo'}
           />
         ),
-        name: notEmptyStringOrDefault(item.name),
+        name_jsx: notEmptyStringOrDefault(item.name + ' ' + item.lastName),
         email: notEmptyStringOrDefault(item.email),
         phone: notEmptyStringOrDefault(item.phone),
         city: notEmptyStringOrDefault(item.city),
-        state: notEmptyStringOrDefault(item.state),
-        address: notEmptyStringOrDefault(item.address),
-        zipcode: notEmptyStringOrDefault(item.zipcode),
+        state: notEmptyStringOrDefault(item.uf),
+        zipcode: notEmptyStringOrDefault(item.zipCode),
       }
       return parsedItem
     })
