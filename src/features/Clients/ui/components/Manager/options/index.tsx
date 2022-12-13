@@ -1,4 +1,5 @@
 import { getAllClients } from '../../../services'
+
 export const statusLabel = {
   1: {
     color: '#21ba45',
@@ -10,11 +11,3 @@ export const statusLabel = {
     name: 'Inativo',
   },
 }
-
-export const dropOptions = [
-  {
-    text: 'Extrair Dados',
-    handler: async () => await getAllClients(true),
-    disabled: false,
-  },
-]

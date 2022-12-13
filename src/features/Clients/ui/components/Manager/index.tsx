@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react'
+import { toast } from 'react-toastify'
 import { Button } from 'semantic-ui-react'
 import { Records } from '@/components/Records/components'
 import { Toolbar } from '@/components/Records/components/Toolbar'
 import { getAllClients } from '../../services/index'
-import { dropOptions } from './options'
+import { download } from '@/utils/Download'
 import { BodyInterface, DataInterface } from './interfaces'
 import header from './header'
 
@@ -35,6 +36,27 @@ export function Manager() {
   useEffect(() => {
     loadData()
   }, [])
+
+  const extractData = useCallback(async () => {
+    setLoading(true)
+    try {
+      const response = await getAllClients(true)
+      download(response.path)
+      toast.success('Ação realizada com succeso!')
+    } catch (error) {
+      toast.error('Erro ao realizar ação')
+    } finally {
+      setLoading(false)
+    }
+  }, [])
+
+  const dropOptions = [
+    {
+      text: 'Extrair Dados',
+      handler: extractData,
+      disabled: false,
+    },
+  ]
 
   return (
     <React.Fragment>
