@@ -64,8 +64,8 @@ export function Manager() {
     return [
       {
         content: 'Editar',
-        onClick: () => alert('true'),
-        disabled: true,
+        onClick: () => console.log(item),
+        disabled: false,
       },
       {
         content: 'Deletar',

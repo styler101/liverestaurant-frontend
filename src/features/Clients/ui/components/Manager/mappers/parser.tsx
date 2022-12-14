@@ -7,6 +7,7 @@ class DataMapper {
   toDomain(data: DataInterface[]): BodyInterface[] {
     return data.map((item) => {
       let parsedItem: BodyInterface = {
+        _id: item._id,
         status: item.status,
         status_jsx: (
           <Bullet
