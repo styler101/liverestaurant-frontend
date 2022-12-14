@@ -12,14 +12,14 @@ const header: ColumnProps[] = [
     content: 'Nome',
     key: 'name_jsx',
     sortKey: 'name',
-    width: 2,
+    width: 3,
     textAlign: 'center',
   },
   {
     content: 'Email',
     key: 'email',
     sortKey: 'email',
-    width: 2,
+    width: 3,
     textAlign: 'center',
   },
   {

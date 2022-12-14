@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Table } from 'semantic-ui-react'
+import { Table, Dropdown as SemanticDropdown } from 'semantic-ui-react'
 import { RowProps } from '@/types/Records'
 import { filterData } from '../../helpers/ColumnsDiff'
+import * as S from './styles'
 
 export function Row(props: RowProps): JSX.Element {
-  const { row, fields } = props
+  const { row, fields, getItem } = props
   const [columns, setColumns] = useState<any[]>([])
 
   useEffect(() => {
@@ -18,6 +19,22 @@ export function Row(props: RowProps): JSX.Element {
           {value}
         </Table.Cell>
       ))}
+      {getItem !== undefined && (
+        <Table.Cell>
+          <S.CustomDropdown icon="ellipsis vertical">
+            <S.CustomDropdown.Menu>
+              {getItem(row).map((item, index) => (
+                <SemanticDropdown.Item
+                  key={index}
+                  text={item.content}
+                  disabled={item.disabled}
+                  onClick={async () => item.onClick()}
+                />
+              ))}
+            </S.CustomDropdown.Menu>
+          </S.CustomDropdown>
+        </Table.Cell>
+      )}
     </React.Fragment>
   )
 }

@@ -10,6 +10,7 @@ import { BodyInterface, DataInterface } from './interfaces'
 import header from './header'
 
 import dataMapper from './mappers/parser'
+import { DropDownItemProps } from '@/types/Records'
 
 export function Manager() {
   const [search, setSearch] = useState<string>('')
@@ -59,6 +60,21 @@ export function Manager() {
     },
   ]
 
+  const getItem = (item: BodyInterface): DropDownItemProps[] => {
+    return [
+      {
+        content: 'Editar',
+        onClick: () => alert('true'),
+        disabled: true,
+      },
+      {
+        content: 'Deletar',
+        onClick: () => alert('true'),
+        disabled: true,
+      },
+    ]
+  }
+
   return (
     <React.Fragment>
       {/** ts-ignore */}
@@ -71,7 +87,12 @@ export function Manager() {
           <span> Criar Contato</span>
         </Button>
       </Toolbar>
-      <Records header={header} loading={false} rows={body} />
+      <Records
+        header={header}
+        loading={loading}
+        rows={body}
+        getItem={getItem}
+      />
     </React.Fragment>
   )
 }

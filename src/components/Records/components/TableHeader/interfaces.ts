@@ -1,4 +1,5 @@
-import { ColumnProps } from '@/types/Records'
-export interface TableHeaderProps{
-  columns: ColumnProps[];
+import { ColumnProps, DropDownItemProps } from '@/types/Records'
+export interface TableHeaderProps {
+  columns: ColumnProps[]
+  getItem: boolean
 }

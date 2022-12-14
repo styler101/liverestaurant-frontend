@@ -11,6 +11,7 @@ export const Container = styled.div`
   flex-direction: row;
   border-bottom: 0;
   justify-content: space-between;
+  background: #fff;
 `
 
 export const ChildrenItem = styled.div`
