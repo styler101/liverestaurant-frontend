@@ -9,13 +9,14 @@ export function Dropdown(props: ComponenProps): any {
     <S.Container>
       {Array.isArray(dropdownOptions) && dropdownOptions.length > 0 && (
         <SemanticDropdown icon="ellipsis vertical">
-          <SemanticDropdown.Menu>
+          <SemanticDropdown.Menu direction="right">
             {dropdownOptions.map((item, index) => (
               <SemanticDropdown.Item
                 key={index}
                 text={item.text}
                 disabled={item.disabled}
                 onClick={async () => await item.handler()}
+                style={{ fontSize: 13, minWidth: 100, bottom: 0 }}
               />
             ))}
           </SemanticDropdown.Menu>
