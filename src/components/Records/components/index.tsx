@@ -9,19 +9,17 @@ export function Records(props: RecodersProps) {
   const { header, loading, rows, getItem } = props
 
   return (
-    <S.Wrapper>
-      <S.Container raised>
-        <Table singleLine className="records-re" stackable attached={true}>
-          <TableHeader columns={header} getItem={!!getItem} />
-          {loading ? (
-            <Loader active />
-          ) : (
-            <Table.Body>
-              <Rows rows={rows} columns={header} getItem={getItem} />
-            </Table.Body>
-          )}
-        </Table>
-      </S.Container>
-    </S.Wrapper>
+    <S.Container raised>
+      <Table singleLine className="records-re" stackable attached={true}>
+        <TableHeader columns={header} getItem={!!getItem} />
+        {loading ? (
+          <Loader active />
+        ) : (
+          <Table.Body>
+            <Rows rows={rows} columns={header} getItem={getItem} />
+          </Table.Body>
+        )}
+      </Table>
+    </S.Container>
   )
 }

@@ -4,3 +4,9 @@ export interface AccountModel {
   name: string
   email: string
 }
+
+export interface GoogleAccount {
+  id: string
+  photo: string
+  token: string
+}

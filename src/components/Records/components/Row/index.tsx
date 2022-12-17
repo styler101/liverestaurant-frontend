@@ -22,13 +22,14 @@ export function Row(props: RowProps): JSX.Element {
       {getItem !== undefined && (
         <Table.Cell>
           <S.CustomDropdown icon="ellipsis vertical">
-            <S.CustomDropdown.Menu>
+            <S.CustomDropdown.Menu className="custom-dropdown" direction="left">
               {getItem(row).map((item, index) => (
                 <SemanticDropdown.Item
                   key={index}
                   text={item.content}
                   disabled={item.disabled}
                   onClick={async () => item.onClick()}
+                  style={{ fontSize: 13, minWidth: 100 }}
                 />
               ))}
             </S.CustomDropdown.Menu>
