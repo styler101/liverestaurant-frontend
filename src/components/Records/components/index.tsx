@@ -6,7 +6,7 @@ import { RecodersProps } from '@/types/Records'
 import * as S from './styles'
 
 export function Records(props: RecodersProps) {
-  const { header, loading, rows, getItem } = props
+  const { header, loading, rows, getItem, search } = props
 
   return (
     <S.Container raised>
@@ -14,6 +14,14 @@ export function Records(props: RecodersProps) {
         <TableHeader columns={header} getItem={!!getItem} />
         {loading ? (
           <Loader active />
+        ) : rows.length === 0 && search.length > 0 ? (
+          <S.EmptyData>
+            <p> Não foi encontrado nenhum registro na busca informada.</p>
+          </S.EmptyData>
+        ) : rows.length === 0 ? (
+          <S.EmptyData>
+            <p> No momento nenhum registro foi encontrado.</p>
+          </S.EmptyData>
         ) : (
           <Table.Body>
             <Rows rows={rows} columns={header} getItem={getItem} />

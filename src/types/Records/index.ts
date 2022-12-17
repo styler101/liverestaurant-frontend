@@ -7,6 +7,7 @@ export interface RecodersProps {
   loading: boolean
   rows: any[]
   getItem?: (item: any) => DropDownItemProps[]
+  search: string
 }
 
 export interface ColumnProps {

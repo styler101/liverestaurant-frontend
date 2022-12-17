@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useCallback } from 'react'
 import * as Fi from 'react-icons/fi'
 import { InputSearchProps } from './interfaces'
 import { useDebounce } from '@/hooks/useDebounce'
@@ -16,9 +16,9 @@ export function Search(props: InputSearchProps): JSX.Element {
     setSearch('')
   }
 
-  function onChange(event: React.ChangeEvent<HTMLInputElement>) {
+  const onChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     setDisplayValue(event.target.value)
-  }
+  }, [])
 
   console.log(search)
   useEffect(() => {}, [])
@@ -31,6 +31,7 @@ export function Search(props: InputSearchProps): JSX.Element {
         onChange={onChange}
         onKeyDown={(e) => {
           if (e.key === 'Enter') {
+            setShowClear(true)
             setSearch(displayValue)
           }
         }}

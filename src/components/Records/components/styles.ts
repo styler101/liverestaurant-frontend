@@ -53,6 +53,7 @@ export const Toolbar = styled.div`
   .ui.table {
     width: 100%;
     overflow-y: auto;
+    position: relative;
     border: 0;
     display: flex;
     align-items: center;
@@ -72,4 +73,15 @@ export const Toolbar = styled.div`
       border-right: 1px solid #ccc;
     }
   }
+`
+
+export const EmptyData = styled.div`
+  width: 100%;
+  padding-top: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 40px;
+  color: #ccc;
 `

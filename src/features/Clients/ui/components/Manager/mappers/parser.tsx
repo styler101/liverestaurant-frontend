@@ -22,6 +22,7 @@ class DataMapper {
         state: notEmptyStringOrDefault(item.uf),
         zipcode: notEmptyStringOrDefault(item.zipCode),
       }
+
       return parsedItem
     })
   }

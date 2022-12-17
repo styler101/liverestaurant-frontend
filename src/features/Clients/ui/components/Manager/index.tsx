@@ -23,8 +23,11 @@ export function Manager() {
       console.log('Camada para api')
     }, 100)
   }
+  console.log(data)
+  console.log(body)
 
   const loadData = useCallback(async () => {
+    setLoading(true)
     try {
       const data = await getAllClients(search, false)
       setBody(dataMapper.toDomain(data))
@@ -33,7 +36,7 @@ export function Manager() {
     } finally {
       setLoading(false)
     }
-  }, [search])
+  }, [search, data])
 
   useEffect(() => {
     loadData()
@@ -92,6 +95,7 @@ export function Manager() {
         loading={loading}
         rows={body}
         getItem={getItem}
+        search={search}
       />
     </React.Fragment>
   )

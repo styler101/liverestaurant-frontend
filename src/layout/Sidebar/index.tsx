@@ -14,7 +14,6 @@ export function Sidebar() {
   const { menuActive, setMenuActive } = useContext(Context)
   const menuRef = useOnClickOutSide(() => setMenuActive(false))
   const navigate = useNavigate()
-  console.log(menuActive)
 
   return (
     <S.Container menuActive={menuActive} ref={menuRef}>

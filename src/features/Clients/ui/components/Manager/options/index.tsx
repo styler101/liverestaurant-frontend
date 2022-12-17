@@ -7,7 +7,7 @@ export const statusLabel = {
   },
 
   0: {
-    color: '#9f3a38',
+    color: '#DC3535',
     name: 'Inativo',
   },
 }

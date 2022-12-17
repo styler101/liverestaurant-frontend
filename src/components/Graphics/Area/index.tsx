@@ -6,7 +6,7 @@ import * as S from './styles'
 
 export function Area(props: GraphicProps) {
   const { header, options } = props
-  console.log(options)
+
   return (
     <S.Container>
       {header}

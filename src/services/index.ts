@@ -15,7 +15,6 @@ const storagedData = JSON.parse(
 
 if (storagedData) {
   const { accessToken } = storagedData
-  console.log(accessToken)
   axiosInstance.defaults.headers.common['Authorization'] = accessToken
     ? `Bearer ${accessToken}`
     : ''
