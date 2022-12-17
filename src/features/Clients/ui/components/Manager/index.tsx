@@ -26,23 +26,23 @@ export function Manager() {
 
   const loadData = useCallback(async () => {
     try {
-      const data = await getAllClients()
+      const data = await getAllClients(search, false)
       setBody(dataMapper.toDomain(data))
     } catch (error) {
       console.log(error)
     } finally {
       setLoading(false)
     }
-  }, [])
+  }, [search])
 
   useEffect(() => {
     loadData()
-  }, [])
+  }, [loadData])
 
   const extractData = useCallback(async () => {
     setLoading(true)
     try {
-      const response = await getAllClients(true)
+      const response = await getAllClients(search, true)
       download(response.path)
       toast.success('Ação realizada com succeso!')
     } catch (error) {

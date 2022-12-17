@@ -36,6 +36,7 @@
       "@typescript-eslint/no-floating-promises": "off",
       "@typescript-eslint/restrict-template-expressions": "off",
       "@typescript-eslint/quotes": "off",
-      "@typescript-eslint/dot-notation": "off"
+      "@typescript-eslint/dot-notation": "off",
+      "no-shadow-restricted-names": "off"
     }
 }

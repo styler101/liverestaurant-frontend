@@ -1,5 +1,7 @@
+import React, { SetStateAction } from 'react'
 import { SemanticWIDTHSNUMBER } from 'semantic-ui-react'
 
+type StateAction<T> = React.Dispatch<SetStateAction<T>>
 export interface RecodersProps {
   header: ColumnProps[]
   loading: boolean
@@ -12,7 +14,6 @@ export interface ColumnProps {
   key: string
   sortKey: string
   width: SemanticWIDTHSNUMBER
-
   textAlign: 'left' | 'center' | 'right'
 }
 
