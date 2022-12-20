@@ -10,33 +10,32 @@ import { BodyInterface, DataInterface } from './interfaces'
 import header from './header'
 
 import dataMapper from './mappers/parser'
-import { DropDownItemProps } from '@/types/Records'
+import { DropDownItemProps, SortState } from '@/types/Records'
 
 export function Manager() {
   const [search, setSearch] = useState<string>('')
   const [data, setData] = useState<DataInterface[]>([])
   const [body, setBody] = useState<BodyInterface[]>([])
   const [loading, setLoading] = useState<boolean>(true)
+  const [sort, setSort] = useState<SortState>({} as SortState)
 
   const reloader = async () => {
     setTimeout(() => {
       console.log('Camada para api')
     }, 100)
   }
-  console.log(data)
-  console.log(body)
 
   const loadData = useCallback(async () => {
     setLoading(true)
     try {
-      const data = await getAllClients(search, false)
+      const data = await getAllClients(search, sort, false)
       setBody(dataMapper.toDomain(data))
     } catch (error) {
       console.log(error)
     } finally {
       setLoading(false)
     }
-  }, [search, data])
+  }, [search, data, sort])
 
   useEffect(() => {
     loadData()
@@ -45,7 +44,7 @@ export function Manager() {
   const extractData = useCallback(async () => {
     setLoading(true)
     try {
-      const response = await getAllClients(search, true)
+      const response = await getAllClients(search, sort, true)
       download(response.path)
       toast.success('Ação realizada com succeso!')
     } catch (error) {
@@ -96,6 +95,7 @@ export function Manager() {
         rows={body}
         getItem={getItem}
         search={search}
+        sort={{ sort, setSort }}
       />
     </React.Fragment>
   )

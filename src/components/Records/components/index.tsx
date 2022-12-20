@@ -6,12 +6,16 @@ import { RecodersProps } from '@/types/Records'
 import * as S from './styles'
 
 export function Records(props: RecodersProps) {
-  const { header, loading, rows, getItem, search } = props
+  const { header, loading, rows, getItem, search, sort } = props
 
   return (
     <S.Container raised>
       <Table singleLine className="records-re" stackable attached={true}>
-        <TableHeader columns={header} getItem={!!getItem} />
+        <TableHeader
+          columns={header}
+          getItem={!!getItem}
+          sort={{ setSort: sort.setSort, sort: sort.sort }}
+        />
         {loading ? (
           <Loader active />
         ) : rows.length === 0 && search.length > 0 ? (

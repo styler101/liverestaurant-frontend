@@ -20,7 +20,6 @@ export function Search(props: InputSearchProps): JSX.Element {
     setDisplayValue(event.target.value)
   }, [])
 
-  console.log(search)
   useEffect(() => {}, [])
   return (
     <S.Container>

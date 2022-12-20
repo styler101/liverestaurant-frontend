@@ -8,6 +8,10 @@ export interface RecodersProps {
   rows: any[]
   getItem?: (item: any) => DropDownItemProps[]
   search: string
+  sort: {
+    sort: SortState
+    setSort: React.Dispatch<SetStateAction<SortState>>
+  }
 }
 
 export interface ColumnProps {
@@ -34,4 +38,10 @@ export interface DropDownItemProps {
   content: string
   onClick: () => void
   disabled: boolean
+}
+
+// interface responsável pela ordenação dos elementos
+export interface SortState {
+  name: string
+  direction: 'ASC' | 'DESC'
 }
