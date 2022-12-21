@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { AppliedFilters } from './components/AppliedFilters'
 
 export const Container = styled.div`
   width: 100%;
@@ -72,4 +73,8 @@ export const Reloader = styled.button`
     transform: rotate(25deg);
     cursor: pointer;
   }
+`
+
+export const AppliedFiltersContainer = styled.div`
+  height: 100%;
 `

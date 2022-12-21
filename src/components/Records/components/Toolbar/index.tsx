@@ -11,6 +11,7 @@ import * as S from './styles'
 export function Toolbar(props: ToolbarProps): JSX.Element {
   const { children, dropdown, search, reloader } = props
 
+  let result = true
   return (
     <React.Fragment>
       <S.Container>
@@ -42,7 +43,18 @@ export function Toolbar(props: ToolbarProps): JSX.Element {
               }}
             />
           )}
-          <AppliedFilters />
+          <Popup
+            content="Nenhum filtro foi selecionado"
+            trigger={
+              <S.AppliedFiltersContainer>
+                <AppliedFilters />
+              </S.AppliedFiltersContainer>
+            }
+            position="bottom center"
+            on="click"
+            inverted
+          />
+
           <Filters />
         </S.RightOptions>
       </S.Container>

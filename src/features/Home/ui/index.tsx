@@ -1,4 +1,5 @@
 import React from 'react'
+import { useReactToPrint } from 'react-to-print'
 import { Grid, GridColumn } from 'semantic-ui-react'
 import { useMain } from '@/features/Main/context'
 import { Header } from '@/components/Header'
@@ -17,14 +18,21 @@ import * as S from './styles'
 
 export function Ui() {
   const { openDashboardModal } = useMain()
+  const printRef = React.useRef()
+
+  const handlePrint = useReactToPrint({
+    // @ts-expect-error
+    content: () => printRef.current,
+  })
+
   return (
-    <S.Container>
+    <S.Container ref={printRef}>
       <Header
         title="Painel de Atendimento"
         description="Utilize os recuros abaixo para monitorar o faturamento do restaurante"
       />
       <S.Wrapper>
-        <Toolbar />
+        <Toolbar handlePrint={handlePrint} />
       </S.Wrapper>
 
       <S.CardsArea>

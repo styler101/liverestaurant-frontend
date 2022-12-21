@@ -38,6 +38,7 @@
       "@typescript-eslint/quotes": "off",
       "@typescript-eslint/dot-notation": "off",
       "no-shadow-restricted-names": "off",
-      "@typescript-eslint/no-unused-expressions": "off"
+      "@typescript-eslint/no-unused-expressions": "off",
+      "@typescript-eslint/indent":"off"
     }
 }

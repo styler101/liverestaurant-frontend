@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import { Dropdown, Popup } from 'semantic-ui-react'
 import { FiMoreVertical, FiEye, FiEyeOff } from 'react-icons/fi'
 import { BsFillGridFill, BsGrid3X3GapFill } from 'react-icons/bs'
+import { ToolbarProps } from './interfaces'
 import useOnClickOutSide from '@/hooks/useClickoutSide'
 
 import * as S from './styles'
 
-export function Toolbar() {
+export function Toolbar({ handlePrint }: ToolbarProps) {
   const [activeOptions, setActiveOptions] = useState<boolean>(false)
   const dropRef = useOnClickOutSide(() => setActiveOptions(false))
 
@@ -32,7 +33,7 @@ export function Toolbar() {
 
       <Dropdown icon={<FiMoreVertical color="#1a1a1d" size={20} />} floating>
         <Dropdown.Menu direction="left">
-          <Dropdown.Item text="Exportar em PDF" />
+          <Dropdown.Item text="Exportar em PDF" onClick={() => handlePrint()} />
         </Dropdown.Menu>
       </Dropdown>
     </S.Options>
