@@ -88,3 +88,15 @@ export const GoogleButtonAnimations = keyframes`
   transform: translateY(0px);
  }
 `
+
+export const EnterFilter = keyframes`
+ 0%{
+  opacity: 0.5;
+  transform: translateX(-30px);
+ }
+
+ 100%{
+  opacity: 1;
+  transform: translateX(0);
+ }
+`

@@ -4,28 +4,26 @@ import { OptionProps } from '@/types/Records'
 import * as S from './styles'
 
 interface ComponentProps {
-  name: string
-  label: string
-  options: OptionProps[] | Function
-}
-export function SelectedFilter() {
-  const options: ComponentProps = {
-    name: 'status',
-    label: 'Status',
-    options: [
-      { label: <Bullet content="Ativo" color="#21BA45" />, value: 0 },
-      { label: <Bullet content="Inativo" color="#D73035" />, value: 1 },
-    ],
+  item: {
+    name: string
+    label: string
+    options: OptionProps[] | Function
   }
+}
+export function SelectedFilter(props: ComponentProps) {
+  const { label, name, options } = props.item
 
   return (
     <S.Container>
-      {Array.isArray(options.options) ? (
+      {Array.isArray(options) ? (
         <S.SelectedContainer>
-          <label> {options.label}</label>
+          <label> {label}</label>
           <S.ItemContainer>
-            {options.options.map((item, index) => (
-              <S.Item key={index}> {item.label}</S.Item>
+            {options.map((item, index) => (
+              <S.Item key={index} onClick={() => console.log(item.value)}>
+                {' '}
+                {item.label}
+              </S.Item>
             ))}
           </S.ItemContainer>
         </S.SelectedContainer>

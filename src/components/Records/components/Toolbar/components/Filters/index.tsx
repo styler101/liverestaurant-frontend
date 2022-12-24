@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FilterOptions } from '@/types/Records'
 import { SelectedFilter } from '../SelectedFilter'
 import * as S from './styles'
+import useOnClickOutSide from '@/hooks/useClickoutSide'
 
 const data: FilterOptions[] = [
   {
@@ -17,6 +18,14 @@ const data: FilterOptions[] = [
 export function Filters() {
   const [activeFilter, setActiveFilter] = useState(false)
 
+  const [selectedField, setSelectedField] = useState<JSX.Element>(
+    <React.Fragment />
+  )
+  let filterRef = useOnClickOutSide(() => {
+    setActiveFilter(false)
+    setSelectedField(<React.Fragment />)
+  })
+
   return (
     <React.Fragment>
       <S.Wrapper>
@@ -27,15 +36,18 @@ export function Filters() {
         {activeFilter && (
           <S.Options>
             {data.map((item) => (
-              <S.Item key={item.label}>
+              <S.Item
+                key={item.label}
+                onClick={() => setSelectedField(<SelectedFilter item={item} />)}
+              >
                 <span> {item.label}</span>
                 <div />
               </S.Item>
             ))}
           </S.Options>
         )}
+        {selectedField}
       </S.Wrapper>
-      <SelectedFilter />
     </React.Fragment>
   )
 }

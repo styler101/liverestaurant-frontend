@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import { EnterFilter } from '@/shared/animations'
 export const Container = styled.div`
   padding: 16px;
 `
@@ -12,12 +12,14 @@ export const SelectedContainer = styled.div`
   box-shadow: 0px 3px 6px #00000029;
   border: 1px solid #eeeeee;
   border-radius: 5px;
-  top: 48px;
-  right: 0px;
+  top: 47px;
+  right: 155px;
   z-index: 999;
   display: flex;
   flex-direction: column;
   padding: 14px 13px;
+  transition: all 2s linear;
+
   label {
     font: normal normal medium 14px/17px Lato;
     color: #525a6a;
@@ -35,7 +37,7 @@ export const Item = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
+  cursor: pointer;
   & > div {
     justify-content: flex-start;
   }

@@ -34,7 +34,7 @@ export const Container = styled.button`
 
 export const Options = styled.div`
   position: absolute;
-  min-width: 160px;
+  min-width: 154px;
   min-height: 45px;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
@@ -43,6 +43,7 @@ export const Options = styled.div`
   top: 48px;
   right: 0px;
   z-index: 999;
+  transition: right 2s linear;
 `
 
 export const Item = styled.button`
