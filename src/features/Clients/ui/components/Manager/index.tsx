@@ -84,11 +84,7 @@ export function Manager() {
         dropdown={dropOptions.length > 0 ? dropOptions : []}
         search={{ search, setSearch }}
         reloader={reloader}
-      >
-        <Button>
-          <span> Criar Contato</span>
-        </Button>
-      </Toolbar>
+      />
       <Records
         header={header}
         loading={loading}

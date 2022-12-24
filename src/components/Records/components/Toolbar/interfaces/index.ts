@@ -12,7 +12,7 @@ export interface DropDownProps {
 }
 
 export interface ToolbarProps {
-  children: React.ReactNode
+  children?: React.ReactNode
   dropdown?: DropDownProps[]
   search?: {
     search: string
