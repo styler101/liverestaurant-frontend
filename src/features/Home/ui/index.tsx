@@ -4,6 +4,7 @@ import { Grid, GridColumn } from 'semantic-ui-react'
 import { useMain } from '@/features/Main/context'
 import { Header } from '@/components/Header'
 import { Toolbar } from '../components/Toolbar'
+import './styles.css'
 
 import {
   DailyPerformance,

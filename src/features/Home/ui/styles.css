@@ -1,0 +1,16 @@
+@media print {
+  body {
+    padding: 20px !important;
+    zoom: 56%;
+    page-break-after: always !important;
+    page-break-before: always !important;
+    overflow: hidden !important;
+    border-top: 0 !important;
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+}
+
+@page {
+  size: landspace;
+}
