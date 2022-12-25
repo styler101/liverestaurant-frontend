@@ -9,8 +9,11 @@ interface ComponentProps {
     label: string
     options: OptionProps[] | Function
   }
+  handleClose: () => void
 }
+
 export function SelectedFilter(props: ComponentProps) {
+  const { handleClose } = props
   const { label, name, options } = props.item
 
   return (
@@ -20,7 +23,12 @@ export function SelectedFilter(props: ComponentProps) {
           <label> {label}</label>
           <S.ItemContainer>
             {options.map((item, index) => (
-              <S.Item key={index} onClick={() => console.log(item.value)}>
+              <S.Item
+                key={index}
+                onClick={() => {
+                  handleClose()
+                }}
+              >
                 {' '}
                 {item.label}
               </S.Item>

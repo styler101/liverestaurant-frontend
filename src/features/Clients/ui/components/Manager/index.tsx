@@ -17,6 +17,7 @@ export function Manager() {
   const [data, setData] = useState<DataInterface[]>([])
   const [body, setBody] = useState<BodyInterface[]>([])
   const [loading, setLoading] = useState<boolean>(true)
+
   const [sort, setSort] = useState<SortState>({} as SortState)
 
   const reloader = async () => {

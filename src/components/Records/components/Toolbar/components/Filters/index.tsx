@@ -18,17 +18,21 @@ const data: FilterOptions[] = [
 export function Filters() {
   const [activeFilter, setActiveFilter] = useState(false)
 
-  const [selectedField, setSelectedField] = useState<JSX.Element>(
+  const [selectedField, setSelectedField] = useState<JSX.Element | null>(
     <React.Fragment />
   )
   let filterRef = useOnClickOutSide(() => {
     setActiveFilter(false)
-    setSelectedField(<React.Fragment />)
+    setSelectedField(null)
   })
 
+  const handleClose = () => {
+    setActiveFilter(false)
+    setSelectedField(null)
+  }
   return (
     <React.Fragment>
-      <S.Wrapper>
+      <S.Wrapper ref={filterRef}>
         <S.Container onClick={() => setActiveFilter(true)}>
           <span> Filtros</span>
           <div />
@@ -38,7 +42,11 @@ export function Filters() {
             {data.map((item) => (
               <S.Item
                 key={item.label}
-                onClick={() => setSelectedField(<SelectedFilter item={item} />)}
+                onClick={() =>
+                  setSelectedField(
+                    <SelectedFilter item={item} handleClose={handleClose} />
+                  )
+                }
               >
                 <span> {item.label}</span>
                 <div />

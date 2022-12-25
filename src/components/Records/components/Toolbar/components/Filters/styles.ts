@@ -1,9 +1,10 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 export const Wrapper = styled.div`
   height: 100%;
   position: relative;
 `
+
 export const Container = styled.button`
   width: 150px;
   height: 100%;
@@ -43,7 +44,7 @@ export const Options = styled.div`
   top: 48px;
   right: 0px;
   z-index: 999;
-  transition: right 2s linear;
+  transition: top 5s linear;
 `
 
 export const Item = styled.button`

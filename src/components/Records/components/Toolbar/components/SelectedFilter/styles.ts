@@ -18,7 +18,6 @@ export const SelectedContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 14px 13px;
-  transition: all 2s linear;
 
   label {
     font: normal normal medium 14px/17px Lato;
