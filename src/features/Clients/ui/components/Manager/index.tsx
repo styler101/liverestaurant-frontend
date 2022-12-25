@@ -90,7 +90,7 @@ export function Manager() {
         header={header}
         loading={loading}
         rows={body}
-        getItem={getItem}
+        // getItem={getItem}
         search={search}
         sort={{ sort, setSort }}
       />
